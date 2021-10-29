@@ -26,10 +26,8 @@ import NgaoPic from '../../images/ngao.png';
 import TcuPic from '../../images/tcu.png';
 import VetaPic from '../../images/veta.png';
 import NectaPic from '../../images/necta.png';
-import axios from 'axios';
 class Home extends Component {
 
-  
 
     componentDidMount(){
 

@@ -44,10 +44,10 @@ const Footer = () => {
                   </div>
                   <div className="footerBox">
                    <h2>USEFUL SITES</h2>
-                   <p> <a href='#'>Necta</a> </p>
-                   <p><a href='#'>TCU</a> </p>
-                   <p><a href='#'>Ministry of Education</a> </p>
-                   <p><a href='#'>Veta</a> </p>
+                   <p> <a href='https://www.necta.go.tz/'>Necta</a> </p>
+                   <p><a href='https://www.tcu.go.tz/'>TCU</a> </p>
+                   <p><a href='https://www.moe.go.tz'>Ministry of Education</a> </p>
+                   <p><a href='https://www.veta.go.tz'>Veta</a> </p>
                   </div>
              </div>
 
