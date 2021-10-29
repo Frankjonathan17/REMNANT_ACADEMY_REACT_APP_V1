@@ -31,6 +31,7 @@ class Home extends Component {
 
     componentDidMount(){
 
+        alert('home updated')
 
 //   calling api for news data
 
