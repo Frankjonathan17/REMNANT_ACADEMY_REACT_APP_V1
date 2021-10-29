@@ -47,7 +47,7 @@ class Home extends Component {
     //   }
     //  }
 
-  setTimeout(()=>GetNewsUpdatesEvents(),2000)
+//   setTimeout(()=>GetNewsUpdatesEvents(),2000)
 
 let closeVideo = document.querySelector('html .emmbed .closeVideo');
 let introVideo = document.querySelector('html .videoBox .left');
