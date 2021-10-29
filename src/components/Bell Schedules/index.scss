@@ -1,0 +1,73 @@
+.bellSpaceBottom{
+    height: 8rem;
+    width: 100%;
+    margin: 0;
+    background: var(--grey);
+}
+.bellSchedules{
+    height: fit-content;
+    background: var(--grey);
+    color: var(--white);
+    text-align: center;
+     *{
+         white-space: pre-wrap;
+         flex-wrap: wrap;
+     }
+
+     .tableMobile{
+         display: none;
+         text-align: start;
+         margin: 0 auto;
+
+         .friday{
+             background: none !important;
+             color: transparent !important;
+         }
+     
+           .activity{
+               background: var(--green-light);
+               font-weight: normal;
+           }
+           .activity2{
+             font-weight: normal;
+               background: var(--green-light);
+           }
+         .time{
+             padding: 1rem 2rem;
+             background:var(--dark-blue)
+         }
+         .day{
+             padding: 1.5rem 2.5rem;
+             background: var(--dark-blue);
+         }
+     }
+    h1{
+        display: inline-block;
+        color:var(--dark-blue);
+        font-weight: var(--nzito);
+        margin: 5rem 0 4rem 0;
+        font-size: var(--title-size);
+    }
+
+    .tableDesktop{
+        text-align: start;
+        margin: 0 auto;
+    
+          .activity{
+              background: var(--green-light);
+              font-weight: normal;
+          }
+          .activity2{
+            font-weight: normal;
+              background: var(--green-light);
+          }
+        .time{
+            padding: 1rem 2rem;
+            background:var(--dark-blue)
+        }
+        .day{
+            padding: 1.5rem 2.5rem;
+            background: var(--dark-blue);
+        }
+    }
+}

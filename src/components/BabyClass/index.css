@@ -1,0 +1,181 @@
+.babyClass {
+  width: 100%;
+  height: auto;
+  padding-bottom: 6rem;
+}
+
+.babyClass .Banner {
+  width: 100%;
+  height: 38rem;
+  position: relative;
+}
+
+.babyClass .Banner .inside-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.babyClass .Banner .inside-banner .boxBnner {
+  width: 45%;
+  position: relative;
+  z-index: 8;
+}
+
+.babyClass .Banner .inside-banner .picture-Box {
+  overflow: hidden;
+  border-radius: .2rem;
+  height: 72%;
+}
+
+.babyClass .Banner .inside-banner .text-Box h1 {
+  font-weight: var(--nzito);
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.babyClass .Banner .inside-banner .text-Box p {
+  word-wrap: break-word;
+  padding-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.babyClass .Banner .inside-banner .text-Box p .big {
+  font-weight: var(--nzito);
+  font-size: 7.5rem;
+  float: left;
+  padding-right: 6px;
+  line-height: 6.5rem;
+}
+
+.babyClass .Banner .inside-banner .text-Box button {
+  padding: 1rem 2rem;
+  border-radius: .3rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  margin-right: .8rem;
+  cursor: pointer;
+  background: #ffffff75;
+  color: var(--white);
+  -webkit-backdrop-filter: blur(155px);
+          backdrop-filter: blur(155px);
+}
+
+.babyClass .Banner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: black;
+  opacity: .16;
+  z-index: 5;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.babyClass .Banner:hover::after {
+  opacity: .2;
+}
+
+.babyClass .Banner .gradient {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(48%, #d20505d4), to(#0450a4db));
+  background: linear-gradient(to right, #d20505d4 48%, #0450a4db);
+}
+
+.babyClass .curriculum {
+  margin-top: 6rem;
+}
+
+.babyClass .curriculum h1 {
+  font-size: 4rem;
+  font-weight: var(--nzito);
+  text-align: center;
+  color: #da3b3b;
+}
+
+.babyClass .curriculum .curInside {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: .2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 4rem;
+}
+
+.babyClass .curriculum .secondCur {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.babyClass .curBox {
+  width: 23.5%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: white;
+  padding: 1rem;
+  border: 1px solid var(--borders);
+  text-align: center;
+  color: var(--dark-blue);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.babyClass .curBox h3 {
+  margin-bottom: 1.5rem;
+}
+
+.babyClass .curBox img {
+  width: 5rem;
+  margin-bottom: 1rem;
+}
+
+.babyClass .curBox .curLists {
+  text-align: start;
+}
+
+.babyClass .curBox .curLists p {
+  width: 97%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.babyClass .curBox .curLists p .dott {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 10rem;
+  background: var(--red);
+  margin-right: .2rem;
+  opacity: .8;
+}
+/*# sourceMappingURL=index.css.map */

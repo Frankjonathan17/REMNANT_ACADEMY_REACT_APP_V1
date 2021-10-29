@@ -1,0 +1,60 @@
+.each-slide > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100% !important;
+  height: 44rem !important;
+}
+
+.each-slide span {
+  padding: 1rem 1.2rem;
+  font-size: 1.8rem;
+  background: #efefef;
+  text-align: center;
+  position: relative;
+  top: 35%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  white-space: pre-wrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #54ACD2;
+  color: var(--blue);
+}
+
+.react-slideshow-container + ul.indicators {
+  -webkit-transform: translateY(-4rem) scale(3);
+          transform: translateY(-4rem) scale(3);
+}
+
+.react-slideshow-container .default-nav {
+  border-radius: 0 !important;
+  background: var(--dark-blue) !important;
+}
+
+.react-slideshow-container .default-nav svg {
+  fill: rgba(255, 255, 255, 0.913);
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.react-slideshow-container .default-nav:nth-of-type(1) {
+  -webkit-transform: translateX(1rem) scale(1.5);
+          transform: translateX(1rem) scale(1.5);
+}
+
+.react-slideshow-container .default-nav:nth-of-type(2) {
+  -webkit-transform: translateX(-1rem) scale(1.5);
+          transform: translateX(-1rem) scale(1.5);
+}
+/*# sourceMappingURL=slider.css.map */

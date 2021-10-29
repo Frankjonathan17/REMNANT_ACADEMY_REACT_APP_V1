@@ -1,0 +1,189 @@
+.contact{
+    height: fit-content;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+color: var(--darkest-blue);
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+
+
+h4{
+    font-weight:900;
+    margin-bottom: 3rem;
+    font-size: var(--title-size);
+    color: var(--green-light)
+}
+
+
+    .contactForm{
+        border: 1px solid var(--borders);
+        background: var(--white);
+        padding: 2rem;
+        border-radius: .5rem;
+     display: inline-block;
+     margin:0 auto;
+        form{
+            width: 100%;
+            height: 100%;
+            text-align: start;
+
+            .btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              
+
+                button{
+                    width: 14rem;
+                    outline: none;
+                    border: none;
+                    font-size: 1.7rem;
+                    height: 4.8rem;
+                    border-radius: .3rem;
+                    background: var(--dark-blue);
+                    cursor: pointer;
+                    transition: all .3s ease;
+                    color: var(--white);
+                    font-weight: 600;
+                    &:hover{
+                        background: var(--blue-light);
+                    }
+                }
+            }
+
+            div{
+                width: 100%;
+                margin-bottom: 2rem;
+                
+                input{
+                  padding: 1rem 2rem;
+                  width: 100%;
+
+                }
+
+                label{
+                    font-weight: 600;
+                    color: var(--blue);
+                }
+            }
+        }
+    }
+
+
+    .contactInfos{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 5rem;
+        width: 100%;
+
+      
+
+
+        .cont{
+            border: 1px solid var(--borders);
+            padding: 2rem;
+            background: var(--white);
+            border-radius: .3rem;
+            text-align: start;
+
+            .addr{
+                font-size: 1.6rem;            
+           }   
+
+           .soc >span {
+               cursor: pointer;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 10rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+           }
+
+           .facebook{
+               span:nth-of-type(1){
+                  background: var(--blue);
+                  svg{
+                      fill:var(--white);
+                  }
+               }
+           }
+           .instagram{
+            span:nth-of-type(1){
+               background: var(--red);
+               svg{
+                   fill:var(--white);
+               }
+            }
+        }
+        .youtube{
+            span:nth-of-type(1){
+               background: var(--red);
+               svg{
+                   fill:var(--white);
+               }
+            }
+        }
+        .whatsaap{
+            span:nth-of-type(1){
+               background: rgb(8, 193, 8);
+               svg{
+                   fill:var(--white)
+               }
+            }
+        }
+           
+
+        }
+ 
+   }
+
+
+   .socialsRemnant{
+       display: flex;
+       align-items: center;
+       flex-wrap: wrap;
+
+       .soc:not(:last-child){
+           margin-right: 3.5rem;
+       }
+   }
+
+
+
+   //    map location
+ 
+
+
+   .mapLoacation{
+       width: 90%;
+       height:50rem;
+       border: 1px solid var(--borders);
+       border-radius: .3rem;
+       background: var(--white);
+       margin:4rem 0;
+       margin-top: 5.5rem;
+
+
+       .mapHead{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+          padding:2rem 0 0  0;
+           background: rgba(78, 78, 255, 0.14);
+
+           h4{
+               display: inline-block;
+           }
+       }
+   }
+
+}

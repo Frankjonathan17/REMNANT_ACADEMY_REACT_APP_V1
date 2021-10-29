@@ -1,0 +1,86 @@
+.bellSpaceBottom {
+  height: 8rem;
+  width: 100%;
+  margin: 0;
+  background: var(--grey);
+}
+
+.bellSchedules {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: var(--grey);
+  color: var(--white);
+  text-align: center;
+}
+
+.bellSchedules * {
+  white-space: pre-wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bellSchedules .tableMobile {
+  display: none;
+  text-align: start;
+  margin: 0 auto;
+}
+
+.bellSchedules .tableMobile .friday {
+  background: none !important;
+  color: transparent !important;
+}
+
+.bellSchedules .tableMobile .activity {
+  background: var(--green-light);
+  font-weight: normal;
+}
+
+.bellSchedules .tableMobile .activity2 {
+  font-weight: normal;
+  background: var(--green-light);
+}
+
+.bellSchedules .tableMobile .time {
+  padding: 1rem 2rem;
+  background: var(--dark-blue);
+}
+
+.bellSchedules .tableMobile .day {
+  padding: 1.5rem 2.5rem;
+  background: var(--dark-blue);
+}
+
+.bellSchedules h1 {
+  display: inline-block;
+  color: var(--dark-blue);
+  font-weight: var(--nzito);
+  margin: 5rem 0 4rem 0;
+  font-size: var(--title-size);
+}
+
+.bellSchedules .tableDesktop {
+  text-align: start;
+  margin: 0 auto;
+}
+
+.bellSchedules .tableDesktop .activity {
+  background: var(--green-light);
+  font-weight: normal;
+}
+
+.bellSchedules .tableDesktop .activity2 {
+  font-weight: normal;
+  background: var(--green-light);
+}
+
+.bellSchedules .tableDesktop .time {
+  padding: 1rem 2rem;
+  background: var(--dark-blue);
+}
+
+.bellSchedules .tableDesktop .day {
+  padding: 1.5rem 2.5rem;
+  background: var(--dark-blue);
+}
+/*# sourceMappingURL=index.css.map */

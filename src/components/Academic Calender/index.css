@@ -1,0 +1,62 @@
+.academicCalender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45rem;
+  background: var(--grey);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.academicCalender h2 {
+  width: 93%;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--dark-blue);
+  font-weight: var(--nzito);
+  font-size: var(--title-size);
+}
+
+.academicCalender .downloadCalender a {
+  background: var(--red);
+  padding: 2rem 3.4rem;
+  border-radius: .3rem;
+  display: inline-block;
+  font-weight: 600;
+  position: relative;
+}
+
+.academicCalender .downloadCalender a span {
+  position: relative;
+  z-index: 5;
+}
+
+.academicCalender .downloadCalender a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.academicCalender .downloadCalender a::after {
+  -webkit-transition: all 0.28s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.28s cubic-bezier(0.215, 0.61, 0.355, 1);
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  width: 2rem;
+  height: 100%;
+  background: var(--dark-red);
+  z-index: 1;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,211 @@
+.contact {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--darkest-blue);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact h4 {
+  font-weight: 900;
+  margin-bottom: 3rem;
+  font-size: var(--title-size);
+  color: var(--green-light);
+}
+
+.contact .contactForm {
+  border: 1px solid var(--borders);
+  background: var(--white);
+  padding: 2rem;
+  border-radius: .5rem;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.contact .contactForm form {
+  width: 100%;
+  height: 100%;
+  text-align: start;
+}
+
+.contact .contactForm form .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .contactForm form .btn button {
+  width: 14rem;
+  outline: none;
+  border: none;
+  font-size: 1.7rem;
+  height: 4.8rem;
+  border-radius: .3rem;
+  background: var(--dark-blue);
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.contact .contactForm form .btn button:hover {
+  background: var(--blue-light);
+}
+
+.contact .contactForm form div {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.contact .contactForm form div input {
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.contact .contactForm form div label {
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.contact .contactInfos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.contact .contactInfos .cont {
+  border: 1px solid var(--borders);
+  padding: 2rem;
+  background: var(--white);
+  border-radius: .3rem;
+  text-align: start;
+}
+
+.contact .contactInfos .cont .addr {
+  font-size: 1.6rem;
+}
+
+.contact .contactInfos .cont .soc > span {
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .contactInfos .cont .facebook span:nth-of-type(1) {
+  background: var(--blue);
+}
+
+.contact .contactInfos .cont .facebook span:nth-of-type(1) svg {
+  fill: var(--white);
+}
+
+.contact .contactInfos .cont .instagram span:nth-of-type(1) {
+  background: var(--red);
+}
+
+.contact .contactInfos .cont .instagram span:nth-of-type(1) svg {
+  fill: var(--white);
+}
+
+.contact .contactInfos .cont .youtube span:nth-of-type(1) {
+  background: var(--red);
+}
+
+.contact .contactInfos .cont .youtube span:nth-of-type(1) svg {
+  fill: var(--white);
+}
+
+.contact .contactInfos .cont .whatsaap span:nth-of-type(1) {
+  background: #08c108;
+}
+
+.contact .contactInfos .cont .whatsaap span:nth-of-type(1) svg {
+  fill: var(--white);
+}
+
+.contact .socialsRemnant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact .socialsRemnant .soc:not(:last-child) {
+  margin-right: 3.5rem;
+}
+
+.contact .mapLoacation {
+  width: 90%;
+  height: 50rem;
+  border: 1px solid var(--borders);
+  border-radius: .3rem;
+  background: var(--white);
+  margin: 4rem 0;
+  margin-top: 5.5rem;
+}
+
+.contact .mapLoacation .mapHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 0 0  0;
+  background: rgba(78, 78, 255, 0.14);
+}
+
+.contact .mapLoacation .mapHead h4 {
+  display: inline-block;
+}
+/*# sourceMappingURL=index.css.map */

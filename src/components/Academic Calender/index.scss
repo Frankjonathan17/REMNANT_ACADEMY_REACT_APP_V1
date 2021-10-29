@@ -1,0 +1,51 @@
+.academicCalender{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45rem;
+    background: var(--grey);
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h2{
+        width: 93%;
+        text-align: center;
+        margin: 0 auto;
+        color: var(--dark-blue);
+        font-weight: var(--nzito);
+        font-size: var(--title-size);
+    }
+
+    .downloadCalender{
+    
+        a{
+             background: var(--red);
+             padding: 2rem 3.4rem;
+             border-radius: .3rem;
+             display: inline-block;
+             font-weight: 600;
+               position: relative;
+               span{
+                   position: relative;
+                   z-index: 5;
+               }
+
+               &:hover::after{
+                   width: 100%;
+                   left: 0;
+               }
+
+             &::after{
+                 transition: all .28s cubic-bezier(0.215, 0.610, 0.355, 1);
+                 content: '';
+                 position: absolute;
+                 left: -1rem;
+                 top: 0;
+                 width: 2rem;
+                 height: 100%;
+                 background: var(--dark-red);
+                 z-index: 1;
+             }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+.admissionProcedures {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 80%;
+  margin: 0 auto;
+  background: var(--grey);
+  padding-bottom: 8rem;
+}
+
+.admissionProcedures .additionalInfo {
+  color: var(--darkest-blue);
+  text-align: center;
+}
+
+.admissionProcedures .additionalInfo .days {
+  text-align: center;
+  display: inline-block;
+  color: var(--red);
+}
+
+.admissionProcedures .additionalInfo h5 {
+  margin-bottom: 2rem;
+}
+
+.admissionProcedures .additionalInfo p {
+  color: var(--dark-blue);
+  margin-bottom: .5rem;
+}
+
+.admissionProcedures h5 {
+  color: var(--darkest-blue);
+  text-align: center;
+  font-size: var(--title-size);
+  font-weight: 600;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+}
+
+.admissionProcedures .admissionProcedureHead {
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.admissionProcedures .admissionProcedureHead span {
+  font-size: var(--title-size);
+  font-weight: var(--nzito);
+}
+
+.admissionProcedures .procedures {
+  color: var(--darkest-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admissionProcedures .procedures .flexxing {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 2.7rem;
+}
+
+.admissionProcedures .procedures .procedure {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.admissionProcedures .procedures a {
+  color: var(--red);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.admissionProcedures .procedures span {
+  margin-right: .5rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 3rem;
+  border-radius: 10rem;
+  background-color: var(--reded);
+  color: var(--white);
+  -ms-flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+}
+
+.admissionProcedures .procedures p {
+  width: 80%;
+}
+/*# sourceMappingURL=index.css.map */

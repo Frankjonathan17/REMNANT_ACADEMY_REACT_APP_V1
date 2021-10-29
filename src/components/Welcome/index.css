@@ -1,0 +1,168 @@
+.welcome {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.welcome .welcomeInner {
+  position: relative;
+  height: 100%;
+  margin-top: -4rem;
+}
+
+.welcome .welcomeInner .welcomeTitle {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: initial;
+  text-align: center;
+  padding-bottom: 8rem;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox {
+  width: 80%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: var(--grey);
+  margin: 0 auto;
+  border-radius: .3rem;
+  color: var(--darkest-blue);
+  padding-bottom: 3rem;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .bottom {
+  color: var(--darkest-blue);
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .bottom p {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .bottom .allTexts {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .bottom .allTexts .titless {
+  font-weight: var(--nzito);
+  margin-bottom: 1rem;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .bottom .allTexts .rededWelcome {
+  font-weight: 900;
+  margin-bottom: .8rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .bottom .allTexts a {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .top {
+  padding-top: 5rem;
+  width: 100%;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .top .text h4 {
+  font-weight: var(--nzito);
+  font-size: 1.8rem;
+  margin-top: .5rem;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .top .picture {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  z-index: 5;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .top .picture:hover::after {
+  -webkit-transform: translate(-45%, 5%) rotate(-28deg) scale(0.8);
+          transform: translate(-45%, 5%) rotate(-28deg) scale(0.8);
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .top .picture:hover::before {
+  -webkit-transform: translate(45%, 5%) rotate(28deg) scale(0.8);
+          transform: translate(45%, 5%) rotate(28deg) scale(0.8);
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .top .picture::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  will-change: transform;
+  z-index: -1;
+  border-radius: .3rem;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .top .picture::before {
+  content: '';
+  border-radius: .3rem;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0%;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  will-change: transform;
+  z-index: -1;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .top .picture img {
+  max-width: 20rem;
+  max-height: auto;
+  border-radius: .3rem;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.welcome .welcomeInner .welcomeTitle .messageBox .top .picture img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.welcome .welcomeInner .welcomeTitle .wHead {
+  width: 100%;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 12rem;
+  margin-bottom: 5rem;
+}
+
+.welcome .welcomeInner .welcomeTitle .wHead h3 {
+  font-weight: var(--nzito);
+  color: var(--white);
+  font-size: var(--title-size);
+}
+/*# sourceMappingURL=index.css.map */
