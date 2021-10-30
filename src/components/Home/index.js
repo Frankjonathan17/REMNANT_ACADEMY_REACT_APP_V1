@@ -27,14 +27,16 @@ import TcuPic from '../../images/tcu.png';
 import VetaPic from '../../images/veta.png';
 import NectaPic from '../../images/necta.png';
 class Home extends Component {
-    
+
+
     componentDidMount(){
 
- 
+        window.alert('mpya')
             setTimeout(() => {
                 window.scrollTo(0,20)
                }, 5);
     
+               
 //   calling api for news data
 
     //  async function GetNewsUpdatesEvents(){
