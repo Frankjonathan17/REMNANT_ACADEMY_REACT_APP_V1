@@ -31,7 +31,7 @@ class Home extends Component {
 
     componentDidMount(){
 
-        window.alert('MWISHOOOO')
+    
             setTimeout(() => {
                 window.scrollTo(0,20)
                }, 5);
