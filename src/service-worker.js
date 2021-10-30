@@ -77,6 +77,8 @@ export function forceSWupdate() {
       navigator.serviceWorker.ready.then(registration => {
 
           registration.update().then(() => {
+            window.alert('kuna version mpya')
+window.location.reload();
 
           });
 
