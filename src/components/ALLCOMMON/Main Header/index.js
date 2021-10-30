@@ -90,67 +90,35 @@ openMenu=()=>{
       ease:'expo.out',
       delay:0
     },'same')
-    .to(this.before,{
-      x:'-100vw',
-      duration:.5,
-      ease:'expo.out',
-      delay:0.1
-    },'same')
-    .to(this.after,{
-      x:'-100vw',
-      duration:.5,
-      ease:'expo.out',
-      delay:0.18
-    },'same')
     .to(this.mobileMenu,{
       x:'-100vw',
       duration:.5,
       ease:'expo.out',
-      delay:0.28
+      delay:0.02
     },'same')
     
     // ending lines animation
     // starting header animation
-    .to(this.MenuOne,{
-      width:'100%',
-      left:0,
-      duration:1,
-      ease:'expo.out',
-      delay:0.36
-    },'same')
     .to(this.MenuTwo,{
       width:'100%',
       left:0,
       duration:1,
       ease:'expo.out',
-      delay:0.38
-    },'same')
-    .to(this.MenuThree,{
-      width:'100%',
-      left:0,
-      duration:1,
-      ease:'expo.out',
-      delay:0.4
+      delay:0.04
     },'same')
     .to(this.MenuTwoSpan,{
         opacity:1,
       duration:.5,
       ease:'expo.out',
-      delay:0.4
+      delay:0.08
     },'same')
-    .to(this.MenuThree,{
-      width:'0%',
-      left:'100%',
-      duration:1,
-      ease:'expo.out',
-      delay:0.52
-    },'same')
+    
     .to(this.menues,{
       opacity:1,
       x:'0',
       duration:1,
       ease:'expo.out',
-      delay:0.54
+      delay:0.09
     },'same')
  }
  }
@@ -179,39 +147,18 @@ openMenu=()=>{
              ease:'expo.out',
              delay:0
            },'same')
-           .to(this.MenuThree,{
-             width:'100%',
-             left:'0%',
-             duration:1,
-             ease:'expo.out',
-             delay:0
-           },'same')
            .to(this.MenuTwoSpan,{
              opacity:0,
            duration:.48,
            ease:'expo.out',
            delay:0.02
          },'same')
-         .to(this.MenuThree,{
-           width:'0%',
-           left:0,
-           duration:1,
-           ease:'expo.out',
-           delay:0.3
-         },'same')
          .to(this.MenuTwo,{
            width:'0%',
            left:0,
            duration:1,
            ease:'expo.out',
-           delay:0.35
-         },'same')
-         .to(this.MenuOne,{
-           width:'0%',
-           left:0,
-           duration:1,
-           ease:'expo.out',
-           delay:0.4
+           delay:0.04
          },'same')
          // ends of inside menu titles animation
          // start closing menu
@@ -219,20 +166,9 @@ openMenu=()=>{
            x:'0vw',
            duration:.5,
            ease:'expo.out',
-           delay:0.45
+           delay:0.05
          },'same')
-         .to(this.after,{
-           x:'0vw',
-           duration:.5,
-           ease:'expo.out',
-           delay:0.5
-         },'same')
-         .to(this.before,{
-           x:'0vw',
-           duration:.5,
-           ease:'expo.out',
-           delay:0.55
-         },'same')
+       
           
        }    
        //outside
@@ -299,7 +235,7 @@ openMenu=()=>{
                      <div className="m-link">School life</div>
                           </Link> 
                           <Link to='/activities' className='menuDropLinks'>
-                     <div className="m-link">Sports & Activities</div>
+                     <div className="m-link">Sports &amp; Activities</div>
                           </Link> 
                           <Link to='/gallery' className='menuDropLinks'>
                      <div className="m-link">Gallery</div>
@@ -341,8 +277,14 @@ openMenu=()=>{
                  <span>Admission</span>
                  <div className="drop">
                    <div className="drop_inside">
-                       <Link to='/joining-classes' className='menuDropLinks'>
-                       <div className="m-link">Joining classes</div>
+                       <Link to='/baby-school' className='menuDropLinks'>
+                       <div className="m-link">Baby School</div>
+                           </Link>
+                           <Link to='/middle-school' className='menuDropLinks'>
+                       <div className="m-link">Middle School</div>
+                           </Link>
+                           <Link to='/upper-school' className='menuDropLinks'>
+                       <div className="m-link">Upper School</div>
                            </Link>
                            <Link to='/admission-procedures' className='menuDropLinks'>
                            <div className="m-link">Admission procedures</div>
@@ -366,7 +308,7 @@ openMenu=()=>{
                          <div className="m-link">Mission &amp; Vision</div> 
                            </Link>
                            <Link to='/history' className='menuDropLinks'>
-                           <div className="m-link">School History</div>
+                           <div className="m-link">philosophy and values</div>
                            </Link>
                            <Link to='/perfomance' className='menuDropLinks'>
                            <div className="m-link">Perfomance</div>

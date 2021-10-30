@@ -19,7 +19,7 @@ import './index.css'
 
 
 
-class BabyClass extends React.Component {
+class UpperSchool extends React.Component {
 
 
     componentDidMount()
@@ -37,15 +37,21 @@ class BabyClass extends React.Component {
                            <div className='text-Box boxBnner'>
                           
                           <div className='banner-title'>
-                            <h1>Baby School</h1>
+                            <h1>Upper School</h1>
                           </div>
                           <div className='banner-explain'>
-                              <p> <span className='big'>D</span>uring the elementary school years, children begin to develop their strengths as scholars. Our goal is to nurture these strengths, encourage their curiosities, and let them know that with hard work and dedication to their studies they can achieve anything later in middle school and well beyond in life.</p>
+                              <p> <span className='big'>U</span>pper school for class 5 up to 7 years can be challenging for 
+                              students as they face intellectual, emotional and physical shifts during 
+                              this time. At Remnant, we provide a safe and nurturing environment in 
+                              which to learn while developing and growing in so many other aspects of life.
+                               We encourage asking questions, delving into intellectual curiosities, and 
+                               continue our work on being kind and respecting
+                               others in preparation for Secondary School and young adulthood.</p>
                           </div>
                           <div className='banner-ctfs'>
-                            <button>Curriculum</button>
-                            <button>Arts</button>
-                            <button>Mode of delivering</button>
+                          <button> <a href="#curi"> Curriculum </a> </button>
+                            <button> <a href="#arts"> Arts </a> </button>
+                            <button><a href="#mode">Mode of delivering</a></button>
                           </div>
                            </div>
                            <div className='picture-Box boxBnner beauty' style={{backgroundImage:`url(${FewStuImg})`}}>
@@ -55,7 +61,7 @@ class BabyClass extends React.Component {
                    </div>
                    {/* ends of banner */}
 
-                   <div className='curriculum'>
+                   <div className='curriculum'id='curi'>
                        <h1>~ Curriculum ~</h1>
                        <div className='curInside'>
                           <div className='curBox'>
@@ -64,11 +70,9 @@ class BabyClass extends React.Component {
                               </div>
                               <h3>READING</h3>
                               <div className='curLists'>
-                                 <p> <span className='dott'></span> Students explore both classic and contemporary works</p>
-                                 <p> <span className='dott'></span>  Examples of works read during these 
-                                 years include  Aesop’s Fables, D’Aulaires’ Book of Greek Mythology, 
-                                 Number of the Stars, Roll of Thunder Hear My Cry, and poetry 
-                                 selections from Langston Hughes and Ogden Nash  </p>
+                                 <p> <span className='dott'></span> Students start to explore Novels and short stories books 
+                                 because Reading  it improves  focus, 
+                                 memory, empathy,grow mentally, emotionally, psychologically  and communication skills </p>
 
                               </div>      
                           </div>
@@ -76,13 +80,11 @@ class BabyClass extends React.Component {
                               <div className='curPic'>
                                   <img src={WriteImg} alt='writing'/>
                               </div>
-                              <h3>WRITTING</h3>
+                              <h3>CIVICS</h3>
                               <div className='curLists'>
-                                <p> <span className='dott'></span>First and second-grade curriculum emphasizes paragraph writing and introduces writing as an ongoing process  </p>
-                                <p> <span className='dott'></span> By third grade, students learn to craft a thesis statement, outline, rough draft, and a final draft  </p>
-                                <p> <span className='dott'></span> Fourth and fifth-graders continue to fine-tune their writing skills and learn to incorporate in-depth feedback to improve their content, structure, and grammar  </p>
-                                <p> <span className='dott'></span> All of our students are taught that writing is a form of creative expression and that their most vivid imaginations should always be used to color their written narratives  </p>
-        
+                                <p> <span className='dott'></span>We continue with civics curriculum from middle school or class 4 and introduce more
+                                 challenging and 
+                               interesting topics   </p>
                               </div>
                           </div>
 
@@ -106,8 +108,13 @@ class BabyClass extends React.Component {
                               </div>
                               <h3>MATHEMATICS BASICS</h3>
                               <div className='curLists'>
-                              <p> <span className='dott'></span>We continue to employ the Saxon Math Program introduced earlier in Kindergarten -Saxon Math is a proven and successful method for teaching mathematics by continually reviewing past concepts as new ones are introduced  </p>
-                              <p> <span className='dott'></span>As math continues to be taught at one grade level above during the lower school years, we find this program to be effective in helping students retain and build upon basic math concepts as they gradually become more challenging</p>
+                              <p> <span className='dott'></span>We continue to utilize the Saxon Math Program,
+                               teaching a year above class level. Truly gifted math students advance yet another 
+                               year in secondary and take either Algebra or Geometry for secondary school credit. 
+                               This math program stays with our students through Algebra. It is a 
+                               spiral-based curriculum, meaning that concepts are introduced in their
+                                most middle school fashion and constantly re-enforced.  </p>
+                        
                         
                               {/* <p> <span className='dott'></span>   </p> */}
             
@@ -120,22 +127,30 @@ class BabyClass extends React.Component {
                               <div className='curPic'>
                                   <img src={ScienceImg} alt='readig'/>
                               </div>
-                              <h3>SCIENCE BASICS</h3>
+                              <h3>SCIENCE</h3>
                               <div className='curLists'>
-                                 <p> <span className='dott'></span> Our lower school students are engaged in science classes with a very hands-on approach as we encourage them to explore and experiment through with every lesson</p>
-                                 <p> <span className='dott'></span>  We cover core ideas related to physical science, life science, earth and space sciences, engineering, technology, and the application of science in daily life  </p>
-                                  <p> <span className='dott'></span>In addition, students love participating in our dedicated MakerSpace curriculum where they are able to translate concepts taught into hands-on projects fostering creativity and the opportunity to collaborate on ideas and inventions </p>
+                                 <p> <span className='dott'></span>We introduce students to geography studies, and continue to teach science with a 
+                                 very hands-on approach in upper school, emphasizing that 
+                                 there is as much to be
+                            learned from a failed experiment as a successful one</p>
+                                 <p> <span className='dott'></span>  Topics are explored across four disciplinary core subjects: physical sciences; life sciences; earth and space sciences </p>
+                                  <p> <span className='dott'></span>
+                                  Students also enjoy participating in our Projects where 
+                                  they can apply science, math, and engineering concepts
+                                   in a fun, creative and collaborative project-based manner
+                                   </p>
                               </div>      
                           </div>
                           <div className='curBox'>
                               <div className='curPic'>
                                   <img src={HistoryImg} alt='writing'/>
                               </div>
-                              <h3>HISTORY BASICS</h3>
+                              <h3>HISTORY</h3>
                               <div className='curLists'>
-                                <p> <span className='dott'></span>Teaching from the Core Knowledge Curriculum, students are introduced to the ancient civilizations of Greece and Rome, India, China, and Mesopotamia</p>
-                                <p> <span className='dott'></span>As part of Kirby Hall’s dedication to growing responsible global citizens and encouraging respect for all cultures, we also explore contemporary contributions from Mexico, Canada, and Japan  </p>
-                                <p> <span className='dott'></span>With regards to North American history, we look at the earliest Meso-american civilizations and lead up to the twentieth-century civil rights movements here preparing students for more in-depth U.S. history studies later in middle school </p>
+                                <p> <span className='dott'></span>We keep learning History in deep and We typically enjoy a 
+                                variety of field trips  to observe up-close some of the things we’ve studied,
+                                 including  visits to Museums, Historical places, 
+                                like Slave Market in Bagamoyo and Zanzibar  </p>
                                
                               </div>
                           </div>
@@ -144,11 +159,10 @@ class BabyClass extends React.Component {
                               <div className='curPic'>
                                   <img src={LanguagesImg} alt='writing'/>
                               </div>
-                              <h3>ENGLISH BASICS</h3>
+                              <h3>ENGLISH</h3>
                               <div className='curLists'>
-                              <p> <span className='dott'></span>Lower school children receive Spanish instruction through Kirby Hall’s ongoing commitment to fostering bilingualism </p>
-                              <p> <span className='dott'></span>Reading, writing, and speaking skills develop at a rapid pace with our accelerated program and with the goal to achieve complete fluency in middle or upper school  </p>
-                              <p> <span className='dott'></span>We also continue to teach about and celebrate the rich and colorful traditions in Hispanic culture and history  </p>
+                              <p> <span className='dott'></span>In class 5 to 7, we are dedicated to shaping truly students in English so as they can become confident in speaking pure and effective English.</p>
+                              <p> <span className='dott'></span>Because English is international Language nowdays Remnant students are often Prepaired well in Communicating English for high school credit and real life Communication skills</p>
                               {/* <p> <span className='dott'></span>   </p> */}
             
                               </div>
@@ -160,17 +174,13 @@ class BabyClass extends React.Component {
                               </div>
                               <h3>PHYSICAL EDUCATION</h3>
                               <div className='curLists'>
-                              <p> <span className='dott'></span>The healthy benefits of being physically active are enforced in all grade levels at Kirby Hall</p>
-                              <p> <span className='dott'></span>PE in lower school is a fun time for students to try both traditional and non-traditional sports as well as learn about the importance of teamwork and good sportsmanship</p>
-                        
-                              {/* <p> <span className='dott'></span>   </p> */}
-            
+                              <p> <span className='dott'></span>We inspire students to see the positive side of being physically active. Students learn traditional and non-traditional sports through engaging in activities that promote cognitive development. Our program builds gross and fine motor skills, teaches safe behaviors, and fosters awareness of personal space. Structured physical activities are an excellent avenue for the development of social skills.</p>
                               </div>
                           </div>
                        </div>
                        {/* ends of curInside */}
 
-                      <br/>
+                      <br id='arts'/>
                       <br/>
                        <br/>
                       <br/>
@@ -182,9 +192,14 @@ class BabyClass extends React.Component {
                               </div>
                               <h3>DRAMA</h3>
                               <div className='curLists'>
-                              <p> <span className='dott'></span>Students begin to learn about play production and theater terminology as well as start to read influential plays in history and practice the art of performing on stage</p>
-                              <p> <span className='dott'></span>As always, creativity and self-expression are highly encouraged during this often much loved and engaging class period</p>
-                        
+                              <p> <span className='dott'></span>We immerse students in all things
+                               theatrical, ranging from stage make-up to theater’s. They study acting techniques, 
+                               special effects, play analysis, modern and classic drama, costuming, 
+                               stage lighting, stage craft, wigs and stage hair, stage sound, 
+                               set design, and theater history. Each student also has the invaluable 
+                               opportunity to act as a technician or performer in major
+                                school-wide productions. The result is a thorough and 
+                                complete exploration of every aspect of the theater world.</p>
                               {/* <p> <span className='dott'></span>   </p> */}
             
                               </div>
@@ -196,10 +211,15 @@ class BabyClass extends React.Component {
                               </div>
                               <h3>MUSIC</h3>
                               <div className='curLists'>
-                              <p> <span className='dott'></span>We spend time enjoying singalongs and learning about different genres of music</p>
-                              <p> <span className='dott'></span>A variety of instrumental families are studied and students work on keeping consistent tempos through regular practice with percussions like the bongo drums</p>
-                               <p> <span className='dott'></span> he history of and importance of music in theater is also introduced in lower school  </p> 
-            
+                              <p> <span className='dott'></span>We immerse students in all things
+                               theatrical, ranging from stage make-up to theater’s. They study acting techniques, 
+                               special effects, play analysis, modern and classic drama, costuming, 
+                               stage lighting, stage craft, wigs and stage hair, stage sound, 
+                               set design, and theater history. Each student also has the invaluable 
+                               opportunity to act as a technician or performer in major
+                                school-wide productions. The result is a thorough and 
+                                complete exploration of every aspect of the theater world.</p>
+                          
                               </div>
                           </div>
 
@@ -209,17 +229,26 @@ class BabyClass extends React.Component {
                               </div>
                               <h3>Art</h3>
                               <div className='curLists'>
-                              <p> <span className='dott'></span>Notable artists throughout history and variety of art techniques are explored </p>
-                        
-                             <p> <span className='dott'></span>  Students are encouraged to draw upon these lessons for inspiration as they create their own unique masterpieces through drawing, painting, sculpting, and print-making </p>
-            
+                              <p> <span className='dott'></span>Students continue to practice the elements of art and principles of design by using a variety of media. In fundamental art courses, techniques are strengthened to prepare for guided independent practice. For the prospective art school student, the focus will be on building a strong portfolio for the art school application process. With intensive studio practice, these students will have a cohesive body of work that shows their unique vision, as well as an acute awareness of the artists and cultures that inspire us </p>
+                    
                               </div>
                           </div>
                           {/* outside curInside */}
                           </div>
+                                    
+                   <div className='mode' id='mode'>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                <h1>~ Mode of delivering~</h1>
+                <p> 1. Though Face to Face with Teachers</p>
+                <p>2. Through theories and practicles</p>
+                <p>3. Use of Projectors and computers.</p>
+                   </div>
                    </div>
         </div>;
     }
 }
  
-export default BabyClass;
+export default UpperSchool;

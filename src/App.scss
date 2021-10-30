@@ -1,3 +1,132 @@
+html body .ourValues{
+    background:var(--white);
+    color: var(--blue);
+    text-align: center;
+    padding: 6rem 1rem 4rem 1rem;
+   
+
+    h2{
+        font-size:var(--title-size);
+        font-weight:900;
+        display:inline-block;
+        width: auto;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+
+
+    }
+    .valuesInside{
+        display:flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        color:var(--white);
+
+          
+
+        .hum{
+            &::after{
+             
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 0;
+                width: 0;
+                top: 0;
+                border-bottom: solid 30px #8F5012;
+                border-left: 30px solid transparent;
+                background: #fff;
+                transition: all ease 0.4s;
+                z-index: 10;
+                transform: scale(1.0);
+                transform-origin: top left;
+            }
+        }
+        .kind{
+            &::after{
+             
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 0;
+                width: 0;
+                top: 0;
+                border-bottom: solid 30px #650B18;
+                border-left: 30px solid transparent;
+                background: #fff;
+                transition: all ease 0.4s;
+                z-index: 10;
+                transform: scale(1.0);
+                transform-origin: top left;
+            }
+        }
+        .res{
+            &::after{
+             
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 0;
+                width: 0;
+                top: 0;
+                border-bottom: solid 30px #033049;
+                border-left: 30px solid transparent;
+                background: #fff;
+                transition: all ease 0.4s;
+                z-index: 10;
+                transform: scale(1.0);
+                transform-origin: top left;
+            }
+        }
+        .value{
+           font-weight: 600;
+           height: 18rem;
+           width: 30rem;
+           display:flex;
+           align-items: center;
+           position:relative;
+           justify-content: center;
+           text-align: center;
+           font-size: 2.5rem;
+           font-weight: 600;
+           
+
+             &:hover::after{
+                 transform: scale(1.5);
+             }
+
+            &:nth-of-type(1){
+                background:#ae132a;
+            }
+            &:nth-of-type(2){
+                background:#f68b1f;
+               
+            }
+            &:nth-of-type(3){
+                background:#05527d;
+            }
+            
+        }
+    }
+}
+
+.mode{
+    width: fit-content;
+    margin: 0 auto;
+
+    text-align:center;
+    h1{
+        margin-bottom: 2.5rem;
+        transform: scale(.89);
+    }
+     p{
+         color:var(--dark-blue);
+         margin:0 auto;
+         width:80%;
+         margin-bottom:.5rem;
+         text-align: start;
+     }
+}
+
 .beauty{
     width: 100%;
     height: 100%;
@@ -323,9 +452,14 @@ html {
                     align-items: center;
                     justify-content: center;
                     text-align: center;
-                    background: white;
-                    color:var(--darkest-blue);
+                    border-right: 1px solid wheat;
+                    border-left: 1px solid wheat;
+                    color:rgba(255, 255, 255, 0.863);
                     font-weight: 600;
+                    transition: all .3s ease;
+                    &:hover{
+                        color:white;
+                    }
                 }
             }
 
@@ -749,6 +883,7 @@ html {
     .background {
         position: relative;
         width: 100%;
+        overflow: hidden;
     
         .bg{
             width: 100%;
@@ -1731,7 +1866,7 @@ opacity: .9;
         padding: 0;
         position: relative;
         z-index: 10;
-        margin-top: 5rem;
+        margin-top: 0rem;
         color: var(--dark-blue);
         text-align: center;
          padding-top: 4rem;
@@ -2021,6 +2156,15 @@ opacity: .9;
   */
 
 @media (max-width: 867px) {
+
+    html body .ourValues .valuesInside{
+        flex-direction: column;
+        align-items:center;
+    }
+
+    html body .ourValues .valuesInside .value:not(:nth-of-type(3)){
+        margin-bottom: 3rem;
+    }
 
     html body .joinClasses{
         flex-direction: column;

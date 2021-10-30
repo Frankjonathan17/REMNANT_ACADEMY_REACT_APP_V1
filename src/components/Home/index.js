@@ -31,10 +31,10 @@ class Home extends Component {
 
     componentDidMount(){
 
-    
             setTimeout(() => {
-                window.scrollTo(0,20)
+                window.scrollTo(0,0)
                }, 5);
+ 
     
 
 //   calling api for news data
@@ -138,6 +138,22 @@ closeVideo.onclick=function(){
     </div>
 </div>
 {/* welcome video ends */}
+{/* our values start  */}
+<div className='ourValues'>
+    <h2>OUR VALUES</h2>
+<div className='valuesInside'> 
+    <div className='value kind'>
+        <div> Kindness</div>
+    </div>
+    <div className='value hum'>
+        <div>Humility</div>
+    </div>
+    <div className='value res'>
+        <div>Respect</div>
+    </div>
+    </div>
+</div>
+{/* our values end */}
 {/* classes start */}
 
 <div className="classesHeader">
@@ -146,7 +162,7 @@ closeVideo.onclick=function(){
     </div>
     <div className="clasesTitle">
        
-        <h2>REMNANT JOINING CLASESS</h2>
+        <h2>ACADEMIC PROGRAMS</h2>
     </div>
     <div className="arrws arr-second">
         <DropDownArrws/>
@@ -170,7 +186,7 @@ closeVideo.onclick=function(){
                        development to increase your confidence and understanding of your growing baby. All our fun activities are suitable from birth with
                         the exercises progressing as your baby grows.</p>
 
-                  <Link to="/baby-class">Read More</Link>
+                  <Link to="/baby-school">Read More</Link>
                </div>
            </div>
            <div className='j-box'>
@@ -183,7 +199,7 @@ closeVideo.onclick=function(){
                        development to increase your confidence and understanding of your growing baby. All our fun activities are suitable from birth with
                         the exercises progressing as your baby grows.</p>
 
-                  <Link to="/baby-class">Read More</Link>
+                  <Link to="/middle-school">Read More</Link>
                </div>
            </div>
            <div className='j-box'>
@@ -196,7 +212,7 @@ closeVideo.onclick=function(){
                        development to increase your confidence and understanding of your growing baby. All our fun activities are suitable from birth with
                         the exercises progressing as your baby grows.</p>
 
-                  <Link to="/baby-class">Read More</Link>
+                  <Link to="/upper-school">Read More</Link>
                </div>
            </div>
    </div>
