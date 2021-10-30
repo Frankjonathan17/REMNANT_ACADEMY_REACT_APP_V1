@@ -5,7 +5,7 @@ class BellSchedules extends React.Component {
   componentDidMount()
   {
       setTimeout(() => {
-          window.scrollTo(0,20)
+          window.scrollTo(0,0)
          }, 5);
   }
     render() { 

@@ -1,1 +1,69 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+.Gallery {
+  width: 100%;
+  height: 100%;
+  background: black !important;
+}
+
+.Gallery .GalleryInner {
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.Gallery .GalleryInner .GHead {
+  height: 12rem;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-position: center;
+}
+
+.Gallery .GalleryInner .GHead::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(2%, #080808de), to(#ae132a));
+  background: linear-gradient(to top, #080808de 2%, #ae132a);
+  opacity: .9;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.Gallery .GalleryInner .GHead::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: .5;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.Gallery .GalleryInner .GHead h2 {
+  font-size: 2.8rem;
+  position: relative;
+  z-index: 5;
+  font-weight: var(--nzito);
+}
+
+.Gallery .insideGallery {
+  height: 40rem;
+  background-color: #191919;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+/*# sourceMappingURL=index.css.map */

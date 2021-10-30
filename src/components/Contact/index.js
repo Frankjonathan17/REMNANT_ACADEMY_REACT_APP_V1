@@ -7,6 +7,12 @@ import BodyImg from '../../images/body_bg.jpg';
 import './index.css';
 
 class Contact extends React.Component {
+
+    componentDidMount() {
+        window.scrollTo(0,0)
+    }
+
+
     render() { 
         return <div>
 <div className="contact" style={{backgroundImage:`url(${BodyImg})`}}>
@@ -48,7 +54,7 @@ class Contact extends React.Component {
         <div className="phyicalAddress cont">
             <h4>PHYSICAL ADDRESS</h4>
             <div className="addr">
-           <div> Remnant Academy pre & primary school ,
+           <div> Remnant Academy pre &amp; primary school ,
             </div>
            <div>P.O.Box 3149,</div>
 

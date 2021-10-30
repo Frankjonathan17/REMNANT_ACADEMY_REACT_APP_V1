@@ -7,6 +7,9 @@ class StudiesOffered extends React.Component {
         const tableContent = document.querySelector('.tableContent')
         const h = tableContent.querySelector('h3');
         const p = tableContent.querySelector('p')
+
+         window.scrollTo(0,0)
+    
         
        let engshBtn = document.querySelector('#eng')
       setTimeout(() => {
