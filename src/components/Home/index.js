@@ -31,12 +31,12 @@ class Home extends Component {
 
     componentDidMount(){
 
-        window.alert('mpya')
+        window.alert('oyooooooooo')
             setTimeout(() => {
                 window.scrollTo(0,20)
                }, 5);
     
-               
+
 //   calling api for news data
 
     //  async function GetNewsUpdatesEvents(){
