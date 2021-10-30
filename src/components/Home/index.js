@@ -27,8 +27,7 @@ import TcuPic from '../../images/tcu.png';
 import VetaPic from '../../images/veta.png';
 import NectaPic from '../../images/necta.png';
 class Home extends Component {
-
-
+    
     componentDidMount(){
 
  
