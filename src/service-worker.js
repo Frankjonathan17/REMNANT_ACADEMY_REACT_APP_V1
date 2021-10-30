@@ -83,7 +83,6 @@ export function forceSWupdate() {
       });
 
   }
-
-  forceSWupdate()
-
 }   
+
+forceSWupdate()
