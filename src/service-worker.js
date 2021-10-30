@@ -70,3 +70,20 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+export function forceSWupdate() {
+
+  if ('serviceWorker' in navigator) {
+
+      navigator.serviceWorker.ready.then(registration => {
+
+          registration.update().then(() => {
+
+          });
+
+      });
+
+  }
+
+  forceSWupdate()
+
+}   
