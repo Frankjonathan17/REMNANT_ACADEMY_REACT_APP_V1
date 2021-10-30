@@ -5,6 +5,13 @@ import BeautyImg from '../../images/body_bg.jpg';
 import HeadImg from '../../images/t_news.png';
 
 class NewsEvents extends React.Component {
+
+    componentDidMount()
+    {
+        setTimeout(() => {
+            window.scrollTo(0,20)
+           }, 5);
+    }
     
     styles={
         backgroundImage:`url(${BeautyImg})`,

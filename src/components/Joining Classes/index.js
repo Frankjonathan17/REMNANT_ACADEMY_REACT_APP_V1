@@ -9,6 +9,12 @@ import BodyImg from '../../images/body_bg.jpg';
 import './index.css'
 
 class JoiningClasses extends React.Component {
+    componentDidMount()
+    {
+        setTimeout(() => {
+            window.scrollTo(0,20)
+           }, 5);
+    }
     render() { 
         return <div className='beauty' style={{backgroundImage:`url(${BodyImg})`}}>
             <div className="joiningClasses">

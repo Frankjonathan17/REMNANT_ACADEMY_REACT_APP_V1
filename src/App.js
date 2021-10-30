@@ -37,8 +37,8 @@ class  App extends React.Component{
     links.forEach(l=>{
             l.addEventListener('click', function(){
              setTimeout(() => {
-              window.scrollTo(0,0)
-             }, 150);
+              window.scrollTo(0,20)
+             }, 50);
             })
     })
     }, 1000);

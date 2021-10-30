@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import WelcomeApplyNow from '../ALLCOMMON/welcome Apply Now Box';
+import './index.css'
 import Slider from '../Slider/index';
 import {Link} from 'react-router-dom';
 import {ReactComponent as Play }from '../../assets/Play.svg';
@@ -13,7 +14,6 @@ import  AlertNewsPic from '../../images/news.gif';
 import PdfPic from '../../images/file.png';
 import IntroVideo from '../../videos/remnant .mp4';
 import BabyClassImg from '../../images/babyclass.jpg';
-import MiddleClassImg from '../../images/middleclass.jpg';
 import AllStudentsImg from '../../images/all-students.jpg';
 import HighClassImg from '../../images/gorofa.jpg';
 import StudentPc from '../../images/student.png';
@@ -31,7 +31,11 @@ class Home extends Component {
 
     componentDidMount(){
 
-
+ 
+            setTimeout(() => {
+                window.scrollTo(0,20)
+               }, 5);
+    
 //   calling api for news data
 
     //  async function GetNewsUpdatesEvents(){
@@ -153,94 +157,50 @@ closeVideo.onclick=function(){
 
 <div className="class">
 
-    <div className="Round">
-        <div className="class1 box">
-            <div className="pic">
-             <img src={BabyClassImg} alt="baby class"/>
-            </div>
-            <div className="info">
-            <span className="title">
-                BABY CLASS
-            </span>
-            <div className="age">
-             <span> start at: Age 3</span>
-            </div>
-            <div className="readmore">
-                <span>
-                <Link to='/joining-classes'>
-                    read more &gt;&gt;
-                    </Link>
-                </span>
-            </div>
-            </div>
-          </div>
-          <div className="class2 box">
-              <div className="pic">
-                  <img src={MiddleClassImg}
-                   alt="middle class"/>
-                 </div>
-                 <div className="info">
-                 <span className="title">
-                     MIDDLE CLASS
-                 </span>
-                 <div className="age">
-                  <span> start at: Age 3</span>
-                 </div>
-                 <div className="readmore">
-                     <span>
-                     <Link to='/joining-classes'>
-                    read more &gt;&gt;
-                    </Link>
-                     </span>
-                 </div>
-                 </div>
-          </div> 
-    </div>
- 
-     <div className="Round">
-        <div className="class3 box">
-            <div className="pic">
-                <img src={AllStudentsImg} 
-                alt="class 1 to 5"/>
+
+   <div className='joinClasses'>
+           <div className='j-box'>
+               <div className='j-pic'>
+                   <img src={BabyClassImg} alt='baby class'/>
                </div>
-               <div className="info">
-               <span className="title">
-                   CLASS 1 - 5
-               </span>
-               <div className="age">
-                <span> start at: Age 5</span>
+               <div className='j-info'>
+                   <h2>BABY SCHOOL</h2>
+                   <p> Our baby classes  offer an insight into baby 
+                       development to increase your confidence and understanding of your growing baby. All our fun activities are suitable from birth with
+                        the exercises progressing as your baby grows.</p>
+
+                  <Link to="/baby-class">Read More</Link>
                </div>
-               <div className="readmore">
-                   <span>
-                   <Link to='/joining-classes'>
-                    read more &gt;&gt;
-                    </Link>
-                   </span>
+           </div>
+           <div className='j-box'>
+               <div className='j-pic'>
+                <img src={HighClassImg} alt='middle class'/>
                </div>
+               <div className='j-info'>
+                   <h2>MIDDLE SCHOOL</h2>
+                   <p> Are classes start from 1 to 4  offering an insight into baby 
+                       development to increase your confidence and understanding of your growing baby. All our fun activities are suitable from birth with
+                        the exercises progressing as your baby grows.</p>
+
+                  <Link to="/baby-class">Read More</Link>
                </div>
-        </div>
-        <div className="class4 box">
-            <div className="pic">
-                <img src={HighClassImg}
-                alt="class 1 to 5"/>
+           </div>
+           <div className='j-box'>
+               <div className='j-pic'>
+             <img src={AllStudentsImg} alt='upper school'/>
                </div>
-               <div className="info">
-               <span className="title">
-                   CLASS 1 - 7
-               </span>
-               <div className="age">
-                <span> start at: Age 5</span>
+               <div className='j-info'>
+                   <h2>UPPER SCHOOL</h2>
+                   <p> start from class 5 to 7 , offer an insight into baby 
+                       development to increase your confidence and understanding of your growing baby. All our fun activities are suitable from birth with
+                        the exercises progressing as your baby grows.</p>
+
+                  <Link to="/baby-class">Read More</Link>
                </div>
-               <div className="readmore">
-                   <span>
-                    <Link to='/joining-classes'>
-                    read more &gt;&gt;
-                    </Link>
-                   </span>
-               </div>
-               </div>
-        </div>
-     </div>
+           </div>
+   </div>
+  
+
 </div>
 
 {/* all classes ends */}

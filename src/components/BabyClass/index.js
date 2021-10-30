@@ -20,6 +20,15 @@ import './index.css'
 
 
 class BabyClass extends React.Component {
+
+
+    componentDidMount()
+{
+    setTimeout(() => {
+        window.scrollTo(0,20)
+       }, 5);
+}
+
     render() { 
         return <div className='babyClass beauty'  style={{backgroundImage:`url(${BodyImg})`}}>
                    <div className='Banner beauty' style={{backgroundImage:`url(${AllStudentsImg})`}} >

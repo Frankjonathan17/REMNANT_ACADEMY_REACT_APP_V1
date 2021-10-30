@@ -4,6 +4,7 @@
   --red: #DF2D22;
   --grey: rgb(234, 234, 234);
   --yellow: #ffe428;
+  --yellowOg:#f68b1f;
   --white: #fff;
   --black: #000;
   --reded: #D62016;
@@ -70,7 +71,7 @@ html {
   width: 100%;
   height: 100%;
   font-size: 62.5%;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   /* ref=> 16px / 10px = 62.5%  which 1rem = 10px*/
   direction: ltr;
  
@@ -83,7 +84,7 @@ html body {
   font-smooth: always;
   font-weight: 400;
   line-height: 1.2;
-  scroll-behavior: smooth !important;
+  /* scroll-behavior: smooth !important; */
   background:var(--blue);
   color: var(--white);
   max-width: 1380px;

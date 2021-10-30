@@ -2,6 +2,12 @@ import React from 'react';
 import './index.css'
 
 class BellSchedules extends React.Component {
+  componentDidMount()
+  {
+      setTimeout(() => {
+          window.scrollTo(0,20)
+         }, 5);
+  }
     render() { 
         return <React.Fragment>
  <div className="bellSchedules">
