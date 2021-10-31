@@ -58,7 +58,13 @@ class OnlineServices extends React.Component {
         .then((answ)=>{
             console.log('answer ',answ)
             this.setState({loading:false})
+            if(answ.data.error){
+                this.info('error',answ.data.error)
+                return
+            }
             this.info('success','Account created successfully!')
+          
+        
         })
         .catch(er=>{
             this.setState({loading:false})
