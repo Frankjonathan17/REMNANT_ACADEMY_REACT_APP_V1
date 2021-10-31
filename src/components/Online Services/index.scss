@@ -9,11 +9,25 @@
     justify-content: center;
     flex-direction: column;
 
-    .remnantLogoBox{
-        width: 20rem;
-        height: 20rem;
-        overflow: hidden;
 
+    .backHome{
+        font-size: 1.5rem;
+        font-weight: 600;
+        background: var(--blue);
+        padding: .5rem 1.8rem;
+        border-radius: .3rem;
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        color: var(--white);
+        z-index: 5;
+    }
+
+    .remnantLogoBox{
+        width: 10rem;
+        height:10rem;
+        overflow: hidden;
+margin-bottom: 1.5rem;
 
         img{
             width: 100%;
@@ -26,7 +40,8 @@
     .onlineInside{
         background: var(--white);
         height: fit-content;
-        width: 50rem;
+        width: 50%;
+        max-width: 40rem;
         padding: 1.8rem;
         border: 1px solid var(--borders);
 

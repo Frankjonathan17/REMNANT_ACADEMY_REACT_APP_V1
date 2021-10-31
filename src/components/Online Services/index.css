@@ -18,10 +18,24 @@
           flex-direction: column;
 }
 
+.onlinePortal .backHome {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: var(--blue);
+  padding: .5rem 1.8rem;
+  border-radius: .3rem;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  color: var(--white);
+  z-index: 5;
+}
+
 .onlinePortal .remnantLogoBox {
-  width: 20rem;
-  height: 20rem;
+  width: 10rem;
+  height: 10rem;
   overflow: hidden;
+  margin-bottom: 1.5rem;
 }
 
 .onlinePortal .remnantLogoBox img {
@@ -36,7 +50,8 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 50rem;
+  width: 50%;
+  max-width: 40rem;
   padding: 1.8rem;
   border: 1px solid var(--borders);
 }

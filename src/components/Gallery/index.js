@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-import AllStudntsImg from '../../images/all-students.jpg';
-import MiddleClassIMG from '../../images/middleclass.jpg';
-import HighClassImg from '../../images/highclas.png';
-import BabyClassImg from '../../images/babyclass.jpg';
+// import {Link} from 'react-router-dom'
+// import AllStudntsImg from '../../images/all-students.jpg';
+// import MiddleClassIMG from '../../images/middleclass.jpg';
+// import HighClassImg from '../../images/highclas.png';
+// import BabyClassImg from '../../images/babyclass.jpg';
 import HeadImg from '../../images/all-students.jpg';
 import BodyImg from '../../images/body_bg.jpg';
 import './index.css'

@@ -2729,6 +2729,9 @@ html .mainHeader {
 }
 
 @media (max-width: 620px) {
+  html body .onlinePortal .onlineInside {
+    width: 88%;
+  }
   html body .babyClass .curriculum h1 {
     font-size: 3rem;
   }
