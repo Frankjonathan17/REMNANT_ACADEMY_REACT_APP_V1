@@ -8,6 +8,7 @@ import HeadImg from '../../images/all-students.jpg';
 import BodyImg from '../../images/body_bg.jpg';
 import './index.css'
 
+
 class Gallery extends React.Component {
     componentDidMount()
     {
