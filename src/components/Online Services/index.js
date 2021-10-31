@@ -78,7 +78,7 @@ class OnlineServices extends React.Component {
 
     async loginUser(data){
         this.setState({loading:true})
-        await axios.post('/api/login',data)
+        await axios.get('/api/login',data)
           .then((answ)=>{
               console.log('answer ',answ)
               this.setState({loading:false})
