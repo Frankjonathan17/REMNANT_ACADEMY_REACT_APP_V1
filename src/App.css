@@ -2288,6 +2288,9 @@ html .mainHeader {
 }
 
 @media (max-width: 945px) {
+  html body .onlinePortal .choose {
+    width: 48.5%;
+  }
   /* CSS */
   html body .joiningClasses .insideJoin {
     padding-top: 2rem;
@@ -2731,6 +2734,9 @@ html .mainHeader {
 @media (max-width: 620px) {
   html body .onlinePortal .onlineInside {
     width: 88%;
+  }
+  html body .onlinePortal .choose {
+    width: 88.2%;
   }
   html body .babyClass .curriculum h1 {
     font-size: 3rem;

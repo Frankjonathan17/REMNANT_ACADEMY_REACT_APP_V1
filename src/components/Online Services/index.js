@@ -17,7 +17,9 @@ class OnlineServices extends React.Component {
         password:'',
         secreteCode:'',
         email:'',
-        loading:false
+        loading:false,
+        showLogin:true,
+        showRegister:false
     }
 
  
@@ -73,6 +75,48 @@ class OnlineServices extends React.Component {
         })
     }
 
+
+    async loginUser(data){
+        this.setState({loading:true})
+        await axios.post('/api/login',data)
+          .then((answ)=>{
+              console.log('answer ',answ)
+              this.setState({loading:false})
+              if(answ.data.error){
+                  this.info('error',answ.data.error)
+                  return
+              }
+              this.info('success','Logging in successfully!')
+            
+          
+          })
+          .catch(er=>{
+              this.setState({loading:false})
+              this.info('error','Kuna tatizo la network')
+              console.log('error',er)
+          })
+    }
+
+    handleLoginChange=(e)=>{
+        e.preventDefault();
+        const {password,email}=this.state;
+
+        if(email.length<5 || email.length===0){
+            this.info('error','Enter a Valid Email')
+            return false;
+        }
+        else if(password.length<6 || password.length>10){
+            this.info('error','Password needed between 6-10 characters')
+            return false;
+        }
+         
+        let data = {
+            password,
+            email
+        }
+         this.loginUser(data)
+    }
+
     handleSubmit=(e)=>{
         
         e.preventDefault();
@@ -85,7 +129,7 @@ class OnlineServices extends React.Component {
             this.info('error','Last name needed atleast 3 characters')
             return false;
         }
-        else if(email.length<5 || lastName.length===0){
+        else if(email.length<5 || email.length===0){
             this.info('error','Enter a Valid Email')
             return false;
         }
@@ -135,12 +179,46 @@ class OnlineServices extends React.Component {
                 pauseOnHover
                 theme="dark"
                 />
+                
             <div className='remnantLogoBox'>
                 <img src={RemnantLogo} alt='remnantLogo'/>
             </div>
+            <div className='choose'>
+                    <div className='login'onClick={()=>this.setState({showLogin:true,showRegister:false})}>
+                       {this.state.showLogin && <span></span>}
+                        Login Now
+                    </div>
+                    <div className='createAccount'
+                    onClick={()=>this.setState({showLogin:false,showRegister:true})}
+                    >
+                    {this.state.showRegister && <span></span>}
+                        Create Account
+                    </div>
+                </div>
                {this.state.loading?   <ReactLoading type={'spin'} color={'var(--blue)'} height={'4rem'} width={'4rem'} />:<div className="onlineInside">
        <div className="headForm" style={this.styles2}>
-         <h2>CREATE NEW ACCOUNT</h2>
+           {/* login box */}
+            {this.state.showLogin && <div className='loginContainer'> 
+           <h2>LOGIN</h2>
+         <br/>
+           <p>(as Teacher/Admin)</p>
+         <form onSubmit={this.handleLoginChange} >
+            <div className='oneInput'>
+            <label htmlFor="email">*Email Address</label>
+             <input onChange={this.handleChange} autoComplete='true' type='email' name='email' placeholder='eg. myemail@mail.com'/>
+            </div>
+            <div className='oneInput'>
+            <label htmlFor="password">*Password</label>
+             <input autoComplete='true' type='password' onChange={this.handleChange} name='password'/>
+            </div>
+            <div className='oneInput'>
+               <button type='submit'>Login</button>
+            </div>
+         </form>
+         </div>}
+           {/* create account box */}
+           {this.state.showRegister&&<div className='createAccountContainer'> 
+         <h2>NEW ACCOUNT</h2>
          <br/>
            <p>(as Teacher/Admin)</p>
          <form onSubmit={this.handleSubmit} >
@@ -168,6 +246,7 @@ class OnlineServices extends React.Component {
                <button type='submit'>Register</button>
             </div>
          </form>
+         </div>}
        </div>
    
        {/* ends of single post box */}

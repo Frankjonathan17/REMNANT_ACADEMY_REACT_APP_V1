@@ -18,6 +18,49 @@
           flex-direction: column;
 }
 
+.onlinePortal .choose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: .8rem;
+  width: 31%;
+}
+
+.onlinePortal .choose > div {
+  width: 50%;
+  background: var(--blue);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  color: var(--white);
+  font-weight: 600;
+  margin-right: .5rem;
+  border-radius: .3rem;
+  cursor: pointer;
+  position: relative;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.onlinePortal .choose > div:hover {
+  background: var(--blue-hover);
+}
+
+.onlinePortal .choose > div span {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 5px;
+  background: var(--yellowOg);
+  z-index: 5;
+  width: 100%;
+}
+
 .onlinePortal .backHome {
   font-size: 1.5rem;
   font-weight: 600;
@@ -32,8 +75,8 @@
 }
 
 .onlinePortal .remnantLogoBox {
-  width: 10rem;
-  height: 10rem;
+  width: 13rem;
+  height: 13rem;
   overflow: hidden;
   margin-bottom: 1.5rem;
 }
@@ -97,6 +140,6 @@
 }
 
 .onlinePortal .onlineInside form button:hover {
-  background: #2323e7;
+  background: var(--blue-hover);
 }
 /*# sourceMappingURL=index.css.map */

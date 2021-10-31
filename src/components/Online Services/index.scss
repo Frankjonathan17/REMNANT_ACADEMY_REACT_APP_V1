@@ -10,6 +10,43 @@
     flex-direction: column;
 
 
+    .choose{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: .8rem;
+          width: 31%;
+
+          &>div{
+              
+            width: 50%;
+            background: var(--blue);
+            transition: all .3s ease;
+            color: var(--white);
+            font-weight: 600;
+            margin-right: .5rem;
+            border-radius: .3rem;
+            cursor: pointer;
+            position: relative;
+            padding: 2rem 0;
+            text-align: center;
+
+              &:hover{
+                background: var(--blue-hover);
+              }
+
+              span{
+                  position: absolute;
+                  top: 0px;
+                  left: 0;
+                  height: 5px;
+                  background: var(--yellowOg);
+                  z-index: 5;
+                  width: 100%;
+              }
+          }
+    }
+
     .backHome{
         font-size: 1.5rem;
         font-weight: 600;
@@ -24,8 +61,8 @@
     }
 
     .remnantLogoBox{
-        width: 10rem;
-        height:10rem;
+        width: 13rem;
+        height:13rem;
         overflow: hidden;
 margin-bottom: 1.5rem;
 
@@ -87,7 +124,7 @@ margin-bottom: 1.5rem;
 
 
                 &:hover{
-                    background: rgb(35, 35, 231);
+                    background: var(--blue-hover);
                 }
             }
         }
