@@ -141,26 +141,27 @@ class OnlineServices extends React.Component {
                {this.state.loading?   <ReactLoading type={'spin'} color={'var(--blue)'} height={'4rem'} width={'4rem'} />:<div className="onlineInside">
        <div className="headForm" style={this.styles2}>
          <h2>CREATE NEW ACCOUNT</h2>
+         <br/>
            <p>(as Teacher/Admin)</p>
          <form onSubmit={this.handleSubmit} >
             <div className='oneInput'>
-            <label htmlFor="firstName">First Name</label>
+            <label htmlFor="firstName">*First Name</label>
              <input autoComplete='true' type='text' onChange={this.handleChange} name='firstName' placeholder='eg.johnson'/>
             </div>
             <div className='oneInput'>
-            <label htmlFor="lastName">Second Name</label>
+            <label htmlFor="lastName">*Second Name</label>
              <input autoComplete='true' type='text'onChange={this.handleChange} name='lastName' placeholder='eg.Andrew'/>
             </div>
             <div className='oneInput'>
-            <label htmlFor="email">Email Address</label>
+            <label htmlFor="email">*Email Address</label>
              <input onChange={this.handleChange} autoComplete='true' type='email' name='email' placeholder='eg. myemail@mail.com'/>
             </div>
             <div className='oneInput'>
-            <label htmlFor="password">New Password</label>
+            <label htmlFor="password">*New Password</label>
              <input autoComplete='true' type='password' onChange={this.handleChange} name='password'/>
             </div>
             <div className='oneInput'>
-            <label htmlFor="secreteCode">Private Code</label>
+            <label htmlFor="secreteCode">*Private Code</label>
              <input onChange={this.handleChange} autoComplete='false' type='number' name='secreteCode' placeholder='Enter Teachers private code'/>
             </div>
             <div className='oneInput'>
