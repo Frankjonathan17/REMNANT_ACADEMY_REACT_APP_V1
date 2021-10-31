@@ -1,0 +1,81 @@
+.onlinePortal
+{
+    width: 100%;
+    background: var(--grey);
+    min-height: 100vh;
+    color:var(--dark-blue);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .remnantLogoBox{
+        width: 20rem;
+        height: 20rem;
+        overflow: hidden;
+
+
+        img{
+            width: 100%;
+            height: 100%;
+             object-fit: cover;
+
+        }
+    }
+
+    .onlineInside{
+        background: var(--white);
+        height: fit-content;
+        width: 50rem;
+        padding: 1.8rem;
+        border: 1px solid var(--borders);
+
+        .headForm{
+       
+            h2{
+                text-align: center;
+                font-weight: var(--nzito);
+            }
+            p{
+                font-weight: 600;
+                color:var(--red);
+                text-align: center;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        form{
+
+            .oneInput{
+                margin-bottom: 2rem;
+            }
+            input{
+                padding: 1.5rem 2.8rem;
+                width: 100%;
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+            label{
+                font-weight: 600;
+
+            }
+            button{
+                width: 100%;
+                padding: 1.8rem 2.8rem;
+                background: var(--blue);
+                color:var(--white);
+                font-size: 1.6rem;
+                font-weight: 600;
+                border: none;
+                cursor: pointer;
+                transition: all .3s ease;
+
+
+                &:hover{
+                    background: rgb(35, 35, 231);
+                }
+            }
+        }
+
+    }
+}

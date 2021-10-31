@@ -1,1 +1,87 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+.onlinePortal {
+  width: 100%;
+  background: var(--grey);
+  min-height: 100vh;
+  color: var(--dark-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.onlinePortal .remnantLogoBox {
+  width: 20rem;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.onlinePortal .remnantLogoBox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.onlinePortal .onlineInside {
+  background: var(--white);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 50rem;
+  padding: 1.8rem;
+  border: 1px solid var(--borders);
+}
+
+.onlinePortal .onlineInside .headForm h2 {
+  text-align: center;
+  font-weight: var(--nzito);
+}
+
+.onlinePortal .onlineInside .headForm p {
+  font-weight: 600;
+  color: var(--red);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.onlinePortal .onlineInside form .oneInput {
+  margin-bottom: 2rem;
+}
+
+.onlinePortal .onlineInside form input {
+  padding: 1.5rem 2.8rem;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.onlinePortal .onlineInside form label {
+  font-weight: 600;
+}
+
+.onlinePortal .onlineInside form button {
+  width: 100%;
+  padding: 1.8rem 2.8rem;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.onlinePortal .onlineInside form button:hover {
+  background: #2323e7;
+}
+/*# sourceMappingURL=index.css.map */

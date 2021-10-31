@@ -38,14 +38,6 @@ class MainHeader extends React.Component  {
         })
  })
 
- window.addEventListener('scroll',function(){
-   if(window.scrollY>148){
-       document.querySelector('.MainHeadWrap').classList.add('fixedHead')       
-   }
-   else{
-       document.querySelector('.MainHeadWrap').classList.remove('fixedHead')
-   }
-   })
 
 }
 
@@ -168,6 +160,12 @@ openMenu=()=>{
            ease:'expo.out',
            delay:0.05
          },'same')
+         .to(this.infoHeader,{
+          marginTop:'0rem',
+          duration:.5,
+          ease:'expo.out',
+          delay:0.058
+        },'same')
        
           
        }    
@@ -203,7 +201,7 @@ openMenu=()=>{
            <Link to="/gallery">Gallery</Link>
        </div>
        <div className="hMl">
-         <Link to="/online-service">Online Services</Link>
+         <Link to="/online-services">Online Services</Link>
      </div>
      <div className="hMl">
          <Link to="/application-form">Application Form</Link>

@@ -17,14 +17,37 @@ import MidleSchool from './components/MiddleSchool';
 import UpperSchool from './components/UperSchool';
 import BabySchool from './components/BabySchool';
 import Gallery from './components/Gallery';
+import OnlineServices from './components/Online Services';
 class  App extends React.Component{
 
   state ={
-    clonedSlider:''
+    clonedSlider:'',
+    OnlineServices:false
   }
 
 
+  HeadScroll=()=>{
+    console.log('scrolling')
+    if(window.scrollY>148){
+        document.querySelector('.MainHeadWrap').classList.add('fixedHead')       
+    }
+    else{
+        document.querySelector('.MainHeadWrap').classList.remove('fixedHead')
+    }
+    }
+
+  setOnlineService=(OnlineServices)=>{
+           this.setState({OnlineServices})
+           if(OnlineServices===false){
+             window.addEventListener('scroll', this.HeadScroll)
+           } else{
+            window.removeEventListener('scroll', this.HeadScroll)
+          }
+  }    
+ 
   componentDidMount(){
+
+    this.setOnlineService(false)
 
     setTimeout(() => {
           // HATUA YA KWANZA  KU CLONE NA KUHIFATHI KISHA KUFUTA NODE
@@ -40,21 +63,43 @@ class  App extends React.Component{
     links.forEach(l=>{
             l.addEventListener('click', function(){
              setTimeout(() => {
-              window.scrollTo(0,20)
+              window.scrollTo(0,0)
              }, 50);
             })
     })
     }, 1000);
   }
 
+// returnCommon=()=>{
 
+//  if(this.state.OnlineServices===false){
+//    return  (
+      
+//    )
+//  }
+
+ // }
+
+  ReturnFooter=()=>{
+           if(this.state.OnlineServices===false){
+             return <Footer/>
+           }
+  }
+  
  render(){
-
   return (
     <div className="wrapper">
-      <div className="overlayMain"></div>
-         <MobileMenu/>
-          <Header/>
+     
+      <div className="overlayMain"> </div>
+       {
+           this.state.OnlineServices ===false && (
+            <React.Fragment>
+            <MobileMenu/>
+     <Header/>
+         </React.Fragment>
+           ) 
+          
+       }
           <Switch>
             <Route path='/academic-calender' component={AcademicCalender}/>
             <Route path='/studies-offered' component={StudiesOffered}/>
@@ -68,9 +113,18 @@ class  App extends React.Component{
             <Route path='/upper-school' component={UpperSchool}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/gallery' component={Gallery}/>
+            <Route path='/online-services' render={(props)=> <OnlineServices setOnlineService={this.setOnlineService} {...props}/>}/>
             <Route exact path='/' render={(props)=><Home clonedSlider={this.state.clonedSlider} {...props}/>}/>
           </Switch>
-          <Footer/>
+         <React.Fragment>
+           {
+            
+            this.state.OnlineServices ===false && (
+              <Footer/>
+             ) 
+            
+           }
+         </React.Fragment>
     </div>
   );
  }
