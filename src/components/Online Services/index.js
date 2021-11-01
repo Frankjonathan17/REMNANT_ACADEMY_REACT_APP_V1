@@ -98,8 +98,9 @@ class OnlineServices extends React.Component {
     }
 
     handleLoginChange=(e)=>{
-        e.preventDefault();
+        e.preventDefault()
         const {password,email}=this.state;
+        console.log(password,email)
 
         if(email.length<5 || email.length===0){
             this.info('error','Enter a Valid Email')
@@ -213,7 +214,7 @@ class OnlineServices extends React.Component {
              <input value={this.state.email} onChange={this.handleLoginInput} autoComplete='true' type='email' name='email' placeholder='eg. myemail@mail.com'/>
             </div>
             <div className='oneInput'>
-                
+
             <label htmlFor="password">*Password</label>
              <input value={this.state.password} autoComplete='true' type='password' onChange={this.handleLoginInput} name='password'/>
             </div>
