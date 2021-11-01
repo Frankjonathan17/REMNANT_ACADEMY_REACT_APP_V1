@@ -203,6 +203,8 @@ class OnlineServices extends React.Component {
             <div className='remnantLogoBox'>
                 <img src={RemnantLogo} alt='remnantLogo'/>
             </div>
+               {this.state.hideAll&&<span className='waitText'>Please wait...</span>}
+
                <React.Fragment>
                    {this.state.hideAll===false &&   <div className='choose'>
                     <div className='login'onClick={()=>this.setState({showLogin:true,showRegister:false})}>

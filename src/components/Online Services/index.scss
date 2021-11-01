@@ -8,6 +8,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
+
+    .waitText
+    {
+
+        font-size: 1.6rem;
+        color: var(--red);
+        font-weight: 600;
+    }
 
     .choose{
           display: flex;

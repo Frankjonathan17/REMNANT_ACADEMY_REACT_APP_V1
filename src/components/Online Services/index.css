@@ -16,6 +16,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
+}
+
+.onlinePortal .waitText {
+  font-size: 1.6rem;
+  color: var(--red);
+  font-weight: 600;
 }
 
 .onlinePortal .choose {
