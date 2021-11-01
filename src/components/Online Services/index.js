@@ -92,10 +92,11 @@ class OnlineServices extends React.Component {
               if(answ.data.redirect){
                 this.info('success','Logging in successfully!') 
                this.setState({hideAll:true})
+               this.setState({showLogin:false})
+               this.setState({showRegister:false})
                 setTimeout(() => {
                     console.log('time to redirect')
-
-                }, 1500);
+                }, 2500);
                 return
             }
               
