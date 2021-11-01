@@ -70,7 +70,7 @@ class OnlineServices extends React.Component {
         })
         .catch(er=>{
             this.setState({loading:false})
-            this.info('error','Kuna shida ya kimtandao, tafadhali Rudia!')
+            this.info('error',er.message)
             console.error('error',er)
         })
     }
