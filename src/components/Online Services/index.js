@@ -82,7 +82,7 @@ class OnlineServices extends React.Component {
         this.setState({loading:true})
         await axios.post('/api/login',data)
           .then((answ)=>{
-              console.log('answer ',answ)
+              //console.log('answer ',answ)
               this.setState({loading:false})
               if(answ.data.error){
                   this.info('error',answ.data.error)
