@@ -61,17 +61,17 @@ class OnlineServices extends React.Component {
             console.log('answer ',answ)
             this.setState({loading:false})
             if(answ.data.error){
-                this.info('error',answ.data.error)
+                this.info('error',answ.data.message)
                 return
             }
-            this.info('success','Account created successfully!')
+            this.info('success',answ.data.message)
           
         
         })
         .catch(er=>{
             this.setState({loading:false})
-            this.info('error','Kuna tatizo la network')
-            console.log('error',er)
+            this.info('error','Kuna shida ya kimtandao, tafadhali Rudia!')
+            console.error('error',er)
         })
     }
 
