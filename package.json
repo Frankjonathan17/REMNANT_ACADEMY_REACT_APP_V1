@@ -54,5 +54,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://remnantbaseapi.herokuapp.com"
+  "proxy":"https://remnantbaseapi.herokuapp.com"
 }
