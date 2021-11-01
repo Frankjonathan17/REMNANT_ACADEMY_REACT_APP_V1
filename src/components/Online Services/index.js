@@ -19,7 +19,8 @@ class OnlineServices extends React.Component {
         email:'',
         loading:false,
         showLogin:true,
-        showRegister:false
+        showRegister:false,
+        hideAll:false
     }
 
  
@@ -90,9 +91,11 @@ class OnlineServices extends React.Component {
               }
               if(answ.data.redirect){
                 this.info('success','Logging in successfully!') 
+               this.setState({hideAll:true})
                 setTimeout(() => {
                     console.log('time to redirect')
-                }, 1000);
+
+                }, 1500);
                 return
             }
               
@@ -199,7 +202,8 @@ class OnlineServices extends React.Component {
             <div className='remnantLogoBox'>
                 <img src={RemnantLogo} alt='remnantLogo'/>
             </div>
-            <div className='choose'>
+               <React.Fragment>
+                   {this.state.hideAll===false &&   <div className='choose'>
                     <div className='login'onClick={()=>this.setState({showLogin:true,showRegister:false})}>
                        {this.state.showLogin && <span></span>}
                         Login Now
@@ -210,7 +214,8 @@ class OnlineServices extends React.Component {
                     {this.state.showRegister && <span></span>}
                         Create Account
                     </div>
-                </div>
+                </div>}
+               </React.Fragment>
                {this.state.loading?   <ReactLoading type={'spin'} color={'var(--blue)'} height={'4rem'} width={'4rem'} />:<div className="onlineInside">
        <div className="headForm" style={this.styles2}>
            {/* login box */}
