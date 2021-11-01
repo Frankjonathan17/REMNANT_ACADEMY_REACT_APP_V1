@@ -40,6 +40,7 @@ class OnlineServices extends React.Component {
     
     componentWillUnmount(){
         this.props.setOnlineService(false);
+        console.log('online service mounted')
     }
 
     info=(type,message)=>{
@@ -68,7 +69,7 @@ class OnlineServices extends React.Component {
           
         
         })
-        
+
         .catch(er=>{
             this.setState({loading:false})
             this.info('error',er.message)
