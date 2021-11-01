@@ -39,7 +39,7 @@ class OnlineServices extends React.Component {
     }
     componentWillUnmount(){
         this.props.setOnlineService(false);
-        console.log('online service unmounted')
+        console.log('unmounted')
     }
 
     info=(type,message)=>{
@@ -89,12 +89,10 @@ class OnlineServices extends React.Component {
                   return
               }
               this.info('success','Logging in successfully!')
-            
-          
           })
           .catch(er=>{
               this.setState({loading:false})
-              this.info('error','Kuna tatizo la network')
+              this.info('error',er.message)
               console.log('error',er)
           })
     }
