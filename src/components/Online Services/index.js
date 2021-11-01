@@ -203,7 +203,6 @@ class OnlineServices extends React.Component {
             <div className='remnantLogoBox'>
                 <img src={RemnantLogo} alt='remnantLogo'/>
             </div>
-               {this.state.hideAll&&<span className='waitText'>Please wait...</span>}
 
                <React.Fragment>
                    {this.state.hideAll===false &&   <div className='choose'>
@@ -220,6 +219,7 @@ class OnlineServices extends React.Component {
                 </div>}
                </React.Fragment>
                {this.state.loading?   <ReactLoading type={'spin'} color={'var(--blue)'} height={'4rem'} width={'4rem'} />:<div className="onlineInside">
+               {this.state.hideAll&&<span className='waitText'>Please wait...</span>}
        <div className="headForm" style={this.styles2}>
            {/* login box */}
             {this.state.showLogin && <div className='loginContainer'> 
