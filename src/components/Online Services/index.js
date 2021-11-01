@@ -161,6 +161,11 @@ class OnlineServices extends React.Component {
          this.setState({[e.target.name]:e.target.value});
       
     }
+    handleLoginChange=(e)=>{
+       
+        this.setState({[e.target.name]:e.target.value});
+     
+   }
 
 
     render() { 
@@ -205,11 +210,11 @@ class OnlineServices extends React.Component {
          <form onSubmit={this.handleLoginChange} >
             <div className='oneInput'>
             <label htmlFor="email">*Email Address</label>
-             <input onChange={this.handleChange} autoComplete='true' type='email' name='email' placeholder='eg. myemail@mail.com'/>
+             <input value={this.state.email} onChange={this.handleLoginChange} autoComplete='true' type='email' name='email' placeholder='eg. myemail@mail.com'/>
             </div>
             <div className='oneInput'>
             <label htmlFor="password">*Password</label>
-             <input autoComplete='true' type='password' onChange={this.handleChange} name='password'/>
+             <input value={this.state.password} autoComplete='true' type='password' onChange={this.handleLoginChange} name='password'/>
             </div>
             <div className='oneInput'>
                <button type='submit'>Login</button>
