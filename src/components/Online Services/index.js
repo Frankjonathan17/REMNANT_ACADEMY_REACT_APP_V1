@@ -77,8 +77,9 @@ class OnlineServices extends React.Component {
 
 
     async loginUser(data){
+        data.email.trim()
         this.setState({loading:true})
-        await axios.get('/api/login',data)
+        await axios.post('/api/login',data)
           .then((answ)=>{
               console.log('answer ',answ)
               this.setState({loading:false})
@@ -100,8 +101,6 @@ class OnlineServices extends React.Component {
     handleLoginChange=(e)=>{
         e.preventDefault()
         const {password,email}=this.state;
-        console.log(password,email)
-
         if(email.length<5 || email.length===0){
             this.info('error','Enter a Valid Email')
             return false;
@@ -111,11 +110,10 @@ class OnlineServices extends React.Component {
             return false;
         }
          
-        let data = {
-            password,
-            email
-        }
-         this.loginUser(data)
+       else{
+           
+         this.loginUser({password:this.state.password,email:this.state.email})
+       }
     }
 
     handleSubmit=(e)=>{
@@ -165,9 +163,16 @@ class OnlineServices extends React.Component {
     handleLoginInput=(e)=>{
        
         this.setState({[e.target.name]:e.target.value});
+       
      
    }
 
+   onEmailChange(event) {
+    this.setState({
+      email: event.target.value
+    })
+
+}
 
     render() { 
      return <div className='onlinePortal beautyBg' style={this.styles}>
@@ -211,7 +216,7 @@ class OnlineServices extends React.Component {
          <form onSubmit={this.handleLoginChange} >
             <div className='oneInput'>
             <label htmlFor="email">*Email Address</label>
-             <input value={this.state.email} onChange={this.handleLoginInput} autoComplete='true' type='email' name='email' placeholder='eg. myemail@mail.com'/>
+             <input value={this.state.email} onChange={this.handleLoginInput} autoComplete='true' type='text' name='email' placeholder='eg. myemail@mail.com'/>
             </div>
             <div className='oneInput'>
 
