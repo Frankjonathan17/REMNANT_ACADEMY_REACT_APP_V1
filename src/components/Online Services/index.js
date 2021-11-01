@@ -40,7 +40,7 @@ class OnlineServices extends React.Component {
     
     componentWillUnmount(){
         this.props.setOnlineService(false);
-        console.log('online service mounted')
+        console.log('online service unmounted')
     }
 
     info=(type,message)=>{
