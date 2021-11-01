@@ -37,7 +37,6 @@ class OnlineServices extends React.Component {
             window.scrollTo(0,0)
            }, 5);
     }
-    
     componentWillUnmount(){
         this.props.setOnlineService(false);
         console.log('online service unmounted')
