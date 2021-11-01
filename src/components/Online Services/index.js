@@ -107,8 +107,7 @@ class OnlineServices extends React.Component {
         else if(password.length<6 || password.length>10){
             this.info('error','Password needed between 6-10 characters')
             return false;
-        }
-         
+        }       
        else{
            
          this.loginUser({password:this.state.password,email:this.state.email})
