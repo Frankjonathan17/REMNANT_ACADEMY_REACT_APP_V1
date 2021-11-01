@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReactLoading from 'react-loading';
 import {Link} from 'react-router-dom'
+import {Redirect} from "react-router-dom"
 class OnlineServices extends React.Component {
 
     state={
@@ -20,7 +21,8 @@ class OnlineServices extends React.Component {
         loading:false,
         showLogin:true,
         showRegister:false,
-        hideAll:false
+        hideAll:false,
+        redirect:false
     }
 
  
@@ -95,8 +97,8 @@ class OnlineServices extends React.Component {
                this.setState({showLogin:false})
                this.setState({showRegister:false})
                 setTimeout(() => {
-                    console.log('time to redirect')
-                }, 2500);
+                    this.setState({redirect:true})
+                }, 1500);
                 return
             }
               
@@ -186,6 +188,8 @@ class OnlineServices extends React.Component {
     render() { 
      return <div className='onlinePortal beautyBg' style={this.styles}>
 
+{this.state.redirect&& <Redirect to='/'/>}
+
          <Link to='/' className='backHome'>  Back Home </Link>
                 <ToastContainer
                 position="top-center"
@@ -213,7 +217,7 @@ class OnlineServices extends React.Component {
                     <div className='createAccount'
                     onClick={()=>this.setState({showLogin:false,showRegister:true})}
                     >
-                        
+
                     {this.state.showRegister && <span></span>}
                         Create Account
                     </div>
