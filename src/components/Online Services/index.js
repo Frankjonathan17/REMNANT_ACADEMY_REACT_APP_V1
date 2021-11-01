@@ -88,7 +88,14 @@ class OnlineServices extends React.Component {
                   this.info('error',answ.data.error)
                   return
               }
-              this.info('success','Logging in successfully!')
+              if(answ.data.redirect){
+                this.info('success','Logging in successfully!') 
+                setTimeout(() => {
+                    console.log('time to redirect')
+                }, 1000);
+                return
+            }
+              
           })
           .catch(er=>{
               this.setState({loading:false})
