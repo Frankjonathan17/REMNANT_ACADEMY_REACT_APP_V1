@@ -53,6 +53,9 @@ class  App extends React.Component{
       window.localStorage.removeItem('ameingia');
       this.setState({logedIn:false})
     }
+    else{
+      this.setState({logedIn:true})
+    }
   }
 
   componentDidMount(){
@@ -123,7 +126,7 @@ class  App extends React.Component{
             <Route path='/upper-school' component={UpperSchool}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/gallery' component={Gallery}/>
-            <Route path='/online-services' render={(props)=> <OnlineServices changeLogin={this.changeLogin} logedIn={this.state.logedIn} setOnlineService={this.setOnlineService} {...props}/>}/>
+            <Route path='/online-services' render={(props)=> <OnlineServices changeLogin={this.changeLogin} loggedIn={this.state.logedIn} setOnlineService={this.setOnlineService} {...props}/>}/>
             <Route path='/admin' render={(props)=> <Admin changeLogin={this.changeLogin} logedIn={this.state.logedIn} setOnlineService={this.setOnlineService} {...props}/>}/>
             <Route exact path='/' render={(props)=><Home  clonedSlider={this.state.clonedSlider} {...props}/>}/>
           </Switch>

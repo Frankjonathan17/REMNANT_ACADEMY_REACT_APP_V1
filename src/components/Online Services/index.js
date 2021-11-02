@@ -24,25 +24,27 @@ class OnlineServices extends React.Component {
         hideAll:false,
         redirect:false,
         pleaseWait:false,
-        showSuggest:false
     }
 
  
     componentDidMount(){
 
-      
+        console.log('good')
+
+        if(this.props.loggedIn){
+            // console.log('n kweli')
+            this.setState({hideAll:true})
+            this.setState({showSuggest:true})
+            this.setState({showLogin:false})
+            this.setState({showRegister:false})
+        }
+         
+
         document.querySelector('.overlayMain').style.background ="#00000000"
            
         setTimeout(() => {
             document.querySelector('.overlayMain').style.background ="#00000000"
-            this.props.setOnlineService(true)
-                     
-console.log(' features')
-if(window.localStorage.getItem('nimeingia')===true){
-    this.setState({hideAll:true})
-    this.setState({showSuggest:true})
-}
-          
+            this.props.setOnlineService(true)         
         }, 2);
 
         setTimeout(() => {
@@ -67,14 +69,17 @@ if(window.localStorage.getItem('nimeingia')===true){
     }
 
 handleLogOut=()=>{
-    this.props.changeLogin()
+    this.props.changeLogin();
+    setTimeout(()=>{
+        window.location.reload()
+    },200)
 }
 
     async SubmitData(data){
         this.setState({loading:true})
       await axios.post('/api/register',data)
         .then((answ)=>{
-            console.log('answer ',answ)
+            // console.log('answer ',answ)
             this.setState({loading:false})
             if(answ.data.error){
                 this.info('error',answ.data.message)
@@ -109,10 +114,11 @@ handleLogOut=()=>{
                this.setState({hideAll:true})
                this.setState({showLogin:false})
                this.setState({showRegister:false})
+               this.props.changeLogin()
                window.localStorage.setItem('ameingia', true)
                 setTimeout(() => {
                     this.setState({redirect:true})
-                }, 1000);
+                }, 100);
                 return
             }
               
@@ -221,7 +227,7 @@ handleLogOut=()=>{
             <div className='remnantLogoBox'>
                 <img src={RemnantLogo} alt='remnantLogo'/>
             </div>
-                  {this.state.showSuggest && <React.Fragment>
+                  {this.props.loggedIn && <React.Fragment>
                     <div className='login-as'>
                      <Link to='/admin'> continue as John ?</Link>
                     </div>
@@ -244,7 +250,7 @@ handleLogOut=()=>{
                     </div>
                 </div>}
                </React.Fragment>
-               {this.state.loading?   <ReactLoading type={'spin'} color={'var(--blue)'} height={'4rem'} width={'4rem'} />:<div className="onlineInside">
+               {this.state.loading?   <ReactLoading type={'spin'} color={'var(--blue)'} height={'4rem'} width={'4rem'} />:<div style={this.state.showSuggest?{padding:'0',opacity:0}:{}} className="onlineInside">
                {this.state.pleaseWait&&<span className='waitText'>Please wait...</span>}
        <div className="headForm" style={this.styles2}>
            {/* login box */}
