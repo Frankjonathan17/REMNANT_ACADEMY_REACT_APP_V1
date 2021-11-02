@@ -30,14 +30,15 @@ class OnlineServices extends React.Component {
     componentDidMount(){
          
 
-        if(this.props.logedIn){
-            this.setState({hideAll:true})
-        }
+      
         document.querySelector('.overlayMain').style.background ="#00000000"
            
         setTimeout(() => {
             document.querySelector('.overlayMain').style.background ="#00000000"
             this.props.setOnlineService(true)
+            if(this.props.logedIn){
+                this.setState({hideAll:true})
+            }
         }, 2);
 
         setTimeout(() => {
