@@ -29,18 +29,19 @@ class OnlineServices extends React.Component {
 
  
     componentDidMount(){
-         
-console.log('nimeongeza features')
-if(window.localStorage.getItem('nimeingia')){
-    this.setState({hideAll:true})
-    this.setState({showSuggest:true})
-}
+
       
         document.querySelector('.overlayMain').style.background ="#00000000"
            
         setTimeout(() => {
             document.querySelector('.overlayMain').style.background ="#00000000"
             this.props.setOnlineService(true)
+                     
+console.log(' features')
+if(window.localStorage.getItem('nimeingia')===true){
+    this.setState({hideAll:true})
+    this.setState({showSuggest:true})
+}
           
         }, 2);
 
