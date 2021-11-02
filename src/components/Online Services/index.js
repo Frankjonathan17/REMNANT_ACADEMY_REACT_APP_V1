@@ -104,9 +104,10 @@ handleLogOut=()=>{
                this.setState({hideAll:true})
                this.setState({showLogin:false})
                this.setState({showRegister:false})
+               window.localStorage.setItem('ameingia', true)
                 setTimeout(() => {
                     this.setState({redirect:true})
-                }, 1500);
+                }, 1000);
                 return
             }
               
