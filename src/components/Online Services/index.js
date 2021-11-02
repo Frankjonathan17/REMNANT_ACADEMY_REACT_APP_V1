@@ -29,7 +29,7 @@ class OnlineServices extends React.Component {
  
     componentDidMount(){
          
-
+console.log('mbona nimeongeza features')
       
         document.querySelector('.overlayMain').style.background ="#00000000"
            
