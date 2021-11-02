@@ -188,7 +188,7 @@ class OnlineServices extends React.Component {
     render() { 
      return <div className='onlinePortal beautyBg' style={this.styles}>
 
-{this.state.redirect&& <Redirect to='/'/>}
+{this.state.redirect&& <Redirect to='/admin'/>}
 
          <Link to='/' className='backHome'>  Back Home </Link>
                 <ToastContainer

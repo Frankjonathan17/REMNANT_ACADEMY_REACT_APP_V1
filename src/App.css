@@ -174,7 +174,7 @@ html body .ourValues .valuesInside .value:nth-of-type(3) {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Open Sans', sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -2354,6 +2354,16 @@ html .mainHeader {
     ##Screen = B/w 481px to 767px
   */
 @media (max-width: 867px) {
+  html body .admin .admin-menu {
+    position: absolute;
+    left: -100%;
+  }
+  html body .admin .admin-container .recentNews .recentNewsInside, html body .admin .admin-container .recentGallery {
+    width: 95%;
+  }
+  html body .admin .admin-container {
+    width: 100%;
+  }
   html body .ourValues .valuesInside {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2639,6 +2649,42 @@ html .mainHeader {
 }
 
 @media (max-width: 660px) {
+  html body .admin .admin-container .welcomeBack {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 3rem;
+    width: 100%;
+  }
+  html body .admin .admin-container .recentNews .rowSingle .rowTitle {
+    width: 72%;
+  }
+  html body .admin .admin-container .recentNews .rowSingle .rowMore {
+    display: block;
+    width: 28%;
+  }
+  html body .titleNewsEvents .edit,
+  html body .titleNewsEvents .delete,
+  html body .titleNewsEvents .date {
+    display: none;
+  }
+  html body .admin .admin-container .recentNews .rowSingle .rowUpdate,
+  html body .admin .admin-container .recentNews .rowSingle .rowDate,
+  html body .admin .admin-container .recentNews .rowSingle .rowDelete,
+  html body .admin .admin-container .recentNews .rowSingle .rowEdit {
+    display: none;
+  }
+  html body .admin .admin-container .recentNews .titleNewsEvents .actionMore {
+    display: block;
+  }
+  html body .admin .admin-container .welcomeBack .create-newsEvent,
+  html body .admin .admin-container .welcomeBack .upload-calender {
+    width: 50%;
+  }
   html body .joinClasses .j-box {
     width: 85%;
     margin-bottom: 1rem;
@@ -2815,9 +2861,50 @@ html .mainHeader {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  html body .admin .admin-container .recentNews .rowSingle .rowTitle {
+    padding: 0rem 1rem 0 0;
+  }
+  html body .admin .admin-container .recentNews .rowSingle .rowMore {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  html body .admin .admin-container .recentGallery .recentGalleryInside {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1rem;
+    -ms-grid-columns: (minmax(13rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    grid-auto-rows: 132px 85px;
+  }
+  html body .admin .admin-container .recentGallery .actions div {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  html body .admin .admin-container .recentGallery .actions div span {
+    margin: 0;
+  }
 }
 
 @media (max-width: 554px) {
+  html body .admin .admin-container .welcomeBack .welcomePerson .Upic {
+    width: 7.3rem;
+  }
+  html body .admin .admin-container .welcomeBack .welcomePerson .wTexts {
+    width: 84%;
+  }
+  html body .admin .admin-container .welcomeBack .create-newsEvent, html body .admin .admin-container .welcomeBack .upload-calender {
+    width: 90%;
+  }
+  html body .admin .admin-container .recentNews .recentNewsInside {
+    padding: 2rem;
+  }
   html body .joinClasses .j-box {
     width: 96.5%;
     margin-bottom: 1rem;

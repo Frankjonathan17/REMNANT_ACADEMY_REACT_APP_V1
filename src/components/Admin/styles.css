@@ -1,0 +1,613 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+.admin {
+  min-height: 100vh;
+  width: 100%;
+  background: #f1f5f9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif !important;
+  --admin-red:#de3a3a;
+  --fade-white:#dde2e8;
+  --b-color:#35393a;
+  --admin-bg:#f1f5f9;
+}
+
+.admin .sameProps {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--black);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  border: 2px solid rgba(255, 127, 80, 0.306);
+  background: rgba(255, 127, 80, 0.169) !important;
+  cursor: pointer;
+  border: 2px solid rgba(255, 0, 0, 0.093);
+  text-align: center;
+  margin-top: 2rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.admin .sameProps:hover {
+  background: #ffc2c289 !important;
+}
+
+.admin .admin-menu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: auto;
+  padding: 0rem;
+  background: #0f172a;
+  width: 24%;
+}
+
+.admin .admin-menu .dashLinks {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  --fade-pink:#f3687f;
+}
+
+.admin .admin-menu .dashLinks .dashLink {
+  padding: 1.5rem 2rem;
+  -webkit-transition: all .28s ease;
+  transition: all .28s ease;
+  border-radius: .3rem;
+  margin-bottom: .5rem;
+  cursor: pointer;
+  text-align: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: var(--fade-white);
+  font-weight: 600;
+}
+
+.admin .admin-menu .dashLinks .dashLink svg {
+  margin-right: .5rem;
+  color: var(--fade-white);
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.admin .admin-menu .dashLinks .dashLink:nth-of-type(2) {
+  background: #2c3344;
+}
+
+.admin .admin-menu .dashLinks .dashLink:hover {
+  background: #2c3344;
+}
+
+.admin .admin-menu .dashLinks .docs svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.admin .admin-menu .dashLinks .dashHeadLinks {
+  text-align: start;
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.admin .admin-menu .dashLinks .dashHeadLinks h5 {
+  color: var(--fade-pink);
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.admin .admin-menu .dashLinks .dashHeadLinks P {
+  font-size: 1.2rem;
+  color: #dde2e8;
+}
+
+.admin .admin-menu .profileShortCut {
+  padding: 1rem;
+}
+
+.admin .admin-menu .profileShortCut .profileBOx {
+  width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 50rem;
+  margin-bottom: 2.5rem;
+}
+
+.admin .admin-menu .profileShortCut .profileBOx img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.admin .admin-menu .profileShortCut .profile-info {
+  text-align: center;
+}
+
+.admin .admin-menu .profileShortCut .profile-info h4 {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  color: var(--white);
+  opacity: .9;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.admin .admin-menu .profileShortCut .profile-info p {
+  font-size: 1.35rem;
+  margin: 0 auto;
+  color: #dde2e8;
+  opacity: .9;
+}
+
+.admin .admin-menu .top_utilis {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem;
+  padding-right: 1.5rem;
+}
+
+.admin .admin-menu .top_utilis .imgLogo {
+  margin-right: auto;
+}
+
+.admin .admin-menu .top_utilis .imgLogo img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.admin .admin-menu .top_utilis .NotifBox {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.admin .admin-menu .top_utilis .NotifBox .notfCount {
+  position: absolute;
+  top: -.4rem;
+  left: 1.1rem;
+  width: 1.6rem;
+  z-index: 5;
+  height: 1.6rem;
+  display: inline-block;
+  background: #0d9488;
+  text-align: center;
+  font-size: .9rem;
+  border-radius: 10rem;
+}
+
+.admin .admin-menu .top_utilis .NotifBox .notfCount span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+}
+
+.admin .admin-menu .top_utilis svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1.5rem;
+  opacity: .7;
+  cursor: pointer;
+}
+
+.admin .admin-container {
+  width: 77%;
+}
+
+.admin .admin-container .welcomeBack {
+  background: var(--white);
+  border-bottom: 1px solid var(--borders);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.admin .admin-container .welcomeBack .create-newsEvent {
+  width: 20%;
+  padding: 1.8rem;
+  text-align: center;
+  height: 15rem;
+  background: #f43f5e;
+  color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 900;
+  position: relative;
+  cursor: pointer;
+}
+
+.admin .admin-container .welcomeBack .create-newsEvent::after {
+  content: '+';
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #f9294c;
+}
+
+.admin .admin-container .welcomeBack .upload-calender {
+  width: 20%;
+  height: 15rem;
+  background: var(--blue);
+  color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.8rem;
+  font-weight: 900;
+  position: relative;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.admin .admin-container .welcomeBack .upload-calender::after {
+  content: '+';
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #053467;
+}
+
+.admin .admin-container .welcomeBack .welcomePerson {
+  color: var(--dark-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15rem;
+  padding: 0 4rem;
+}
+
+.admin .admin-container .welcomeBack .welcomePerson svg {
+  width: 2rem;
+}
+
+.admin .admin-container .welcomeBack .welcomePerson .Upic {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 10rem;
+  overflow: hidden;
+  margin-right: 1.5rem;
+}
+
+.admin .admin-container .welcomeBack .welcomePerson .Upic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.admin .admin-container .welcomeBack .welcomePerson .wTexts h3 {
+  font-weight: 600;
+  font-size: 3rem;
+  color: #1e293b;
+}
+
+.admin .admin-container .welcomeBack .welcomePerson .wTexts p {
+  font-weight: 100;
+  opacity: .9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.admin .admin-container .topNavAdmin {
+  width: 100%;
+  height: 8rem;
+  background: white;
+  border-bottom: 1px solid var(--borders);
+  color: var(--b-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+}
+
+.admin .admin-container .topNavAdmin svg {
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+
+.admin .admin-container .topNavAdmin div {
+  padding: 1rem 1.3rem;
+  border-radius: 10rem;
+  -webkit-transition: all .28s ease;
+  transition: all .28s ease;
+}
+
+.admin .admin-container .topNavAdmin div:hover {
+  background: var(--admin-bg);
+}
+
+.admin .admin-container .topNavAdmin div:nth-of-type(1) {
+  margin-right: auto;
+}
+
+.admin .admin-container .recentGallery {
+  width: 90%;
+  background: white;
+  margin: 0 auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  border-radius: 1rem;
+  padding: 3rem;
+  -webkit-box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f !important;
+          box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f !important;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.admin .admin-container .recentGallery .recentGalleryInside {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-auto-rows: 250px 150px;
+}
+
+.admin .admin-container .recentGallery .picSingle {
+  background: violet;
+  position: relative;
+  border-radius: .8rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.admin .admin-container .recentGallery .picSingle:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.admin .admin-container .recentGallery .picSingle .imgSingle {
+  width: 100%;
+  will-change: transform;
+  height: 100%;
+}
+
+.admin .admin-container .recentGallery .picSingle .imgSingle img {
+  will-change: transform;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.admin .admin-container .recentGallery .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.admin .admin-container .recentGallery .actions div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .4rem .8rem;
+  background: var(--admin-red);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.admin .admin-container .recentGallery .actions div span {
+  margin-right: .4rem;
+}
+
+.admin .admin-container .recentGallery .actions div:nth-of-type(1) {
+  border-right: 1px solid white;
+  background: rgba(41, 135, 20, 0.774);
+}
+
+.admin .admin-container .recentGallery .actions div:nth-of-type(1):hover {
+  background: rgba(27, 97, 12, 0.774);
+}
+
+.admin .admin-container .recentGallery .actions div:nth-of-type(2):hover {
+  background: #bd2c2c;
+}
+
+.admin .admin-container .recentGallery svg {
+  width: 2rem;
+  color: rgba(255, 255, 255, 0.829);
+}
+
+.admin .admin-container .recentNews {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin .admin-container .recentNews h4 {
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase  !important;
+  color: var(--black);
+  padding: 2.5rem 0;
+  font-weight: var(--nzito);
+}
+
+.admin .admin-container .recentNews .recentNewsInside {
+  width: 90%;
+  margin: 0 auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: var(--white);
+  margin-top: 0rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f !important;
+          box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f !important;
+  color: var(--dark-blue);
+  text-align: center;
+  padding: 3rem;
+  padding-bottom: 2rem;
+}
+
+.admin .admin-container .recentNews .titleNewsEvents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #f8fafc;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.admin .admin-container .recentNews .titleNewsEvents .actionMore {
+  display: none;
+}
+
+.admin .admin-container .recentNews .titleNewsEvents div {
+  width: 25%;
+}
+
+.admin .admin-container .recentNews .rowSingle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #de3a3a0f;
+  margin-bottom: .8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.admin .admin-container .recentNews .rowSingle .rowMore {
+  display: none;
+  background: lightpink;
+  border-radius: 5rem;
+  padding: .3rem 0rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.admin .admin-container .recentNews .rowSingle div {
+  width: 25%;
+}
+
+.admin .admin-container .recentNews .rowSingle .rowDelete, .admin .admin-container .recentNews .rowSingle .rowUpdate {
+  -webkit-transition: all .28s ease;
+  transition: all .28s ease;
+  border-radius: 10rem;
+  padding: 1rem 0rem;
+  cursor: pointer;
+}
+
+.admin .admin-container .recentNews .rowSingle .rowDelete:hover, .admin .admin-container .recentNews .rowSingle .rowUpdate:hover {
+  background: #de3a3a37;
+}
+
+.admin .admin-container .recentNews .rowSingle svg {
+  width: 2rem;
+  height: 2rem;
+  max-width: 3rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */

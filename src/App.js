@@ -18,6 +18,7 @@ import UpperSchool from './components/UperSchool';
 import BabySchool from './components/BabySchool';
 import Gallery from './components/Gallery';
 import OnlineServices from './components/Online Services';
+import Admin from './components/Admin';
 class  App extends React.Component{
 
   state ={
@@ -48,15 +49,6 @@ class  App extends React.Component{
   componentDidMount(){
 
     this.setOnlineService(false)
-
-    setTimeout(() => {
-          // HATUA YA KWANZA  KU CLONE NA KUHIFATHI KISHA KUFUTA NODE
-    let SLIDERR = document.getElementById('wowslider-container0');
-    let cloned = SLIDERR.cloneNode(true);
-    this.setState({clonedSlider:cloned})
-    SLIDERR.style.display='none'
-
-    }, 50);
 
     setTimeout(() => {
     let links = document.querySelectorAll('a');
@@ -114,6 +106,7 @@ class  App extends React.Component{
             <Route path='/contact' component={Contact}/>
             <Route path='/gallery' component={Gallery}/>
             <Route path='/online-services' render={(props)=> <OnlineServices setOnlineService={this.setOnlineService} {...props}/>}/>
+            <Route path='/admin' render={(props)=> <Admin setOnlineService={this.setOnlineService} {...props}/>}/>
             <Route exact path='/' render={(props)=><Home clonedSlider={this.state.clonedSlider} {...props}/>}/>
           </Switch>
          <React.Fragment>
