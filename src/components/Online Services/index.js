@@ -22,13 +22,17 @@ class OnlineServices extends React.Component {
         showLogin:true,
         showRegister:false,
         hideAll:false,
-        redirect:false
+        redirect:false,
+        pleaseWait:false
     }
 
  
     componentDidMount(){
+         
 
-
+        if(this.props.logedIn){
+            this.setState({hideAll:true})
+        }
         document.querySelector('.overlayMain').style.background ="#00000000"
            
         setTimeout(() => {
@@ -56,6 +60,10 @@ class OnlineServices extends React.Component {
             progress: undefined,
             });
     }
+
+handleLogOut=()=>{
+    this.props.changeLogin()
+}
 
     async SubmitData(data){
         this.setState({loading:true})
@@ -207,7 +215,14 @@ class OnlineServices extends React.Component {
             <div className='remnantLogoBox'>
                 <img src={RemnantLogo} alt='remnantLogo'/>
             </div>
-
+                  {this.props.logedIn&& <React.Fragment>
+                    <div className='login-as'>
+                     <Link to='/admin'> continue as John ?</Link>
+                    </div>
+                    <div className='login-as another' onClick={this.handleLogOut}>
+                     <span> another account ?</span>
+                    </div>
+                      </React.Fragment>}
                <React.Fragment>
                    {this.state.hideAll===false &&   <div className='choose'>
                     <div className='login'onClick={()=>this.setState({showLogin:true,showRegister:false})}>
@@ -224,7 +239,7 @@ class OnlineServices extends React.Component {
                 </div>}
                </React.Fragment>
                {this.state.loading?   <ReactLoading type={'spin'} color={'var(--blue)'} height={'4rem'} width={'4rem'} />:<div className="onlineInside">
-               {this.state.hideAll&&<span className='waitText'>Please wait...</span>}
+               {this.state.pleaseWait&&<span className='waitText'>Please wait...</span>}
        <div className="headForm" style={this.styles2}>
            {/* login box */}
             {this.state.showLogin && <div className='loginContainer'> 

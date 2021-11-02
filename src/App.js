@@ -23,7 +23,8 @@ class  App extends React.Component{
 
   state ={
     clonedSlider:'',
-    OnlineServices:false
+    OnlineServices:false,
+    logedIn:false
   }
 
 
@@ -46,9 +47,26 @@ class  App extends React.Component{
           }
   }    
  
+
+  changeLogin=()=>{
+    if(window.localStorage.getItem('ameingia')){
+      window.localStorage.removeItem('ameingia');
+      this.setState({logedIn:false})
+    }
+  }
+
   componentDidMount(){
 
     this.setOnlineService(false)
+
+    let logged = window.localStorage.getItem('ameingia');
+    if(!logged) {
+      this.setState({logedIn:false})
+      return
+    }
+    else{
+      this.setState({logedIn:true})
+    }
 
     setTimeout(() => {
     let links = document.querySelectorAll('a');
@@ -105,9 +123,9 @@ class  App extends React.Component{
             <Route path='/upper-school' component={UpperSchool}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/gallery' component={Gallery}/>
-            <Route path='/online-services' render={(props)=> <OnlineServices setOnlineService={this.setOnlineService} {...props}/>}/>
-            <Route path='/admin' render={(props)=> <Admin setOnlineService={this.setOnlineService} {...props}/>}/>
-            <Route exact path='/' render={(props)=><Home clonedSlider={this.state.clonedSlider} {...props}/>}/>
+            <Route path='/online-services' render={(props)=> <OnlineServices changeLogin={this.changeLogin} logedIn={this.state.logedIn} setOnlineService={this.setOnlineService} {...props}/>}/>
+            <Route path='/admin' render={(props)=> <Admin changeLogin={this.changeLogin} logedIn={this.state.logedIn} setOnlineService={this.setOnlineService} {...props}/>}/>
+            <Route exact path='/' render={(props)=><Home  clonedSlider={this.state.clonedSlider} {...props}/>}/>
           </Switch>
          <React.Fragment>
            {

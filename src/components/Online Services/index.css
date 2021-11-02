@@ -19,6 +19,41 @@
   text-align: center;
 }
 
+.onlinePortal .login-as {
+  margin-top: 4rem;
+}
+
+.onlinePortal .login-as a {
+  padding: 1.5rem 2.8rem;
+  border-radius: 1.5rem;
+  background: var(--reded);
+  color: var(--white);
+  font-weight: 600;
+  text-align: center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.onlinePortal .login-as a:hover {
+  opacity: .7;
+}
+
+.onlinePortal .another span {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  padding: 1.5rem 2.8rem;
+  border-radius: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  background: var(--dark-blue) !important;
+}
+
+.onlinePortal .another span:hover {
+  opacity: .7;
+}
+
 .onlinePortal .waitText {
   font-size: 1.6rem;
   color: var(--red);
