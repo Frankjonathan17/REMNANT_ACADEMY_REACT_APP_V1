@@ -23,22 +23,25 @@ class OnlineServices extends React.Component {
         showRegister:false,
         hideAll:false,
         redirect:false,
-        pleaseWait:false
+        pleaseWait:false,
+        showSuggest:false
     }
 
  
     componentDidMount(){
          
-console.log('mbona nimeongeza features')
+console.log('nimeongeza features')
+if(window.localStorage.getItem('nimeingia')){
+    this.setState({hideAll:true})
+    this.setState({showSuggest:true})
+}
       
         document.querySelector('.overlayMain').style.background ="#00000000"
            
         setTimeout(() => {
             document.querySelector('.overlayMain').style.background ="#00000000"
             this.props.setOnlineService(true)
-            if(this.props.logedIn){
-                this.setState({hideAll:true})
-            }
+          
         }, 2);
 
         setTimeout(() => {
@@ -217,7 +220,7 @@ handleLogOut=()=>{
             <div className='remnantLogoBox'>
                 <img src={RemnantLogo} alt='remnantLogo'/>
             </div>
-                  {this.props.logedIn&& <React.Fragment>
+                  {this.state.showSuggest && <React.Fragment>
                     <div className='login-as'>
                      <Link to='/admin'> continue as John ?</Link>
                     </div>
