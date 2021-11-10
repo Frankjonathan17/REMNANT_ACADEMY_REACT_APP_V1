@@ -4,11 +4,235 @@
   background: black !important;
 }
 
+.Gallery .showCaseBoxGallery {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 500;
+  background: rgba(0, 0, 0, 0.53);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Gallery .showCaseBoxGallery .showCaseInside {
+  width: 70%;
+  height: 70%;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  border-radius: .2rem;
+}
+
+.Gallery .showCaseBoxGallery .showCaseInside .caption {
+  position: absolute;
+  bottom: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #ae132adb;
+  border-radius: .3rem;
+  text-align: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  padding: .8rem 1rem;
+  font-size: 1.8rem;
+}
+
+.Gallery .showCaseBoxGallery .showCaseInside .controls {
+  width: 4rem;
+  height: 8rem;
+  background: var(--blue);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: white;
+  font-weight: bold;
+  opacity: .8;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.Gallery .showCaseBoxGallery .showCaseInside .controls:hover {
+  background: var(--blue-light);
+  opacity: 1;
+}
+
+.Gallery .showCaseBoxGallery .showCaseInside .increment {
+  right: 0;
+}
+
+.Gallery .showCaseBoxGallery .showCaseInside .decrement {
+  left: 0;
+}
+
+.Gallery .showCaseBoxGallery .showCaseInside .closeMe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .8rem 1.2rem;
+  border-radius: .2rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--blue);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.Gallery .showCaseBoxGallery .showCaseInside .closeMe:hover {
+  background: var(--reded);
+}
+
+.Gallery .showCaseBoxGallery .showCaseInside img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .Gallery .GalleryInner {
   width: 80%;
   height: 100%;
   text-align: center;
   margin: 0 auto;
+}
+
+.Gallery .GalleryInner .GRID-GALLERY {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: .5rem;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-auto-rows: 200px auto;
+  background: rgba(255, 255, 255, 0.804);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border: 1px solid var(--borders);
+  border-radius: 1rem;
+  min-height: 100%;
+  position: relative !important;
+}
+
+.Gallery .GalleryInner .GRID-GALLERY img {
+  width: 100%;
+  height: 100%;
+  max-height: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.Gallery .GalleryInner .GRID-GALLERY img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.Gallery .GalleryInner .GRID-GALLERY .NOthing {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Gallery .GalleryInner .GRID-GALLERY .NOthing h4 {
+  background: rgba(232, 165, 176, 0.74);
+  padding: .8rem 1.6rem;
+  border-radius: .3rem;
+}
+
+.Gallery .GalleryInner .GRID-GALLERY .shimmer2 {
+  background: #e8e8e8;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--reded);
+  position: absolute;
+  border-radius: 0rem;
+  left: 0;
+  top: 0;
+  cursor: wait;
+  overflow: hidden;
+  z-index: 2;
+  -webkit-transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.Gallery .GalleryInner .GRID-GALLERY .shimmer2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-radius: 0rem;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 5;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: shimmer 1.2s linear infinite forwards;
+          animation: shimmer 1.2s linear infinite forwards;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(213, 211, 211, 0)), color-stop(70%, rgba(255, 255, 255, 0.489)), to(rgba(255, 255, 255, 0.749)));
+  background: linear-gradient(90deg, rgba(213, 211, 211, 0) 30%, rgba(255, 255, 255, 0.489) 70%, rgba(255, 255, 255, 0.749) 100%);
 }
 
 .Gallery .GalleryInner .GHead {
@@ -61,9 +285,12 @@
 }
 
 .Gallery .insideGallery {
-  height: 40rem;
+  min-height: 35rem;
   background-color: #191919;
   width: 100%;
+  height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: .5rem;
+  position: relative !important;
 }
 /*# sourceMappingURL=index.css.map */

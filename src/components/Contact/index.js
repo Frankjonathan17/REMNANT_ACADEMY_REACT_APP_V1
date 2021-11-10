@@ -19,14 +19,15 @@ class Contact extends React.Component {
        <h4>CONTACT US</h4>
     <div className="contactForm">
         <h4>FOR MORE INFO FILL AND SUBMIT FORM </h4>
-         <form>
+   
+         <form action="https://getform.io/f/e2104e78-898a-44c1-94c4-4d25421e50a8" method="POST">
             <div className="row">
                 <label htmlFor="fistname">*First Name</label>
-                <input type="text" name="fistname"/>
+                <input type="text" name="fist-name"/>
             </div>
             <div className="row">
                 <label htmlFor="lastname">*Last Name</label>
-                <input type="text" name="lastname"/>
+                <input type="text" name="last-name"/>
             </div>
             <div className="row">
                 <label htmlFor="phone">*Phone Number</label>
@@ -117,8 +118,9 @@ class Contact extends React.Component {
 
 
        <div className="mapLoacation">
-           <div className="mapHead">
+           <div className="mapHead" style={{flexDirection:'column'}}>
                <h4>TRACE OUR LOCATION</h4>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.1236557999437!2d38.954619414263554!3d-6.754771467927629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c69312620fe6b%3A0x54d2ca9a37969670!2sRemnant%20Academy%20Pre%26Primary%20School!5e0!3m2!1sen!2stz!4v1636488006272!5m2!1sen!2stz" title='frameForMap' width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
            </div>
        </div>
 

@@ -1,0 +1,42 @@
+.philosophyAndValue {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 4rem;
+}
+
+.philosophyAndValue .phInside {
+  width: 80%;
+  margin: 0 auto;
+  background: var(--grey);
+  height: 100%;
+}
+
+.philosophyAndValue .phInside .phHead {
+  width: 100%;
+  height: 8rem;
+  background-size: 120%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.philosophyAndValue .phInside .philosophyHead {
+  color: var(--dark-blue);
+  text-align: start;
+  padding: 2rem 3.8rem;
+}
+
+.philosophyAndValue .phInside .philosophyHead h2 {
+  margin-top: 3rem;
+  font-weight: 900;
+}
+/*# sourceMappingURL=index.css.map */

@@ -5,6 +5,12 @@ import HeadImg from '../../images/t_news.png';
 import './index.css'
 
 class AdmissionProcedures extends React.Component {
+
+
+  componentDidMount() {
+    window.scrollTo(0,0)
+  }
+
     render() { 
         return(
             <div className='beauty'  style={{backgroundImage:`url(${BodyImg})`}}>
@@ -52,15 +58,15 @@ class AdmissionProcedures extends React.Component {
                 ~ Under normal circumstance these are the WORKING HOURS ~ :</b>
               </p>
               <div className="days">
-                <div>Monday, 9:30am-4:15pm</div>
+                <div>Monday, 7:00am-4:30pm</div>
           
-              <div>  Tues, 9:30am-4:15pm</div>
+              <div>  Tues, 7:00am-4:30pm</div>
                 
-              <div>  Wed, 9:30am-4:15pm </div>
+              <div>  Wed,  7:00am-4:30pm</div>
                 
-             <div>   Thurs, 9:30am-4:15pm </div>
+             <div>   Thurs, 7:00am-4:30pm</div>
              <div>   
-              Fri, 9:30am-4:15pm</div>
+              Fri,  7:00am-4:30pm</div>
               </div>
           </div>
           

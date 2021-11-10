@@ -1,5 +1,106 @@
 .Gallery{
 
+
+    .showCaseBoxGallery{
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 500;
+        background: rgba(0, 0, 0, 0.53);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .showCaseInside{
+            width: 70%;
+            height: 70%;
+            transform: translateY(15%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+              background: white;
+              border-radius: .2rem;
+
+              .caption{
+                  position: absolute;
+                  bottom: 0;
+                  width: fit-content;
+                  background: #ae132adb;
+                  border-radius: .3rem;
+                  text-align: center;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  color: white;
+                  font-weight: bold;
+                  padding: .8rem 1rem;
+                  font-size: 1.8rem;
+              }
+          
+              .controls{
+                  width: 4rem;
+                  height: 8rem;
+                  background: var(--blue);
+                  position: absolute;
+                  top:50%;
+                  transform:translateY(-50%);
+                  color:white;
+                  font-weight: bold;
+                  opacity: .8;
+                  font-size: 3rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  cursor: pointer;
+                  transition: all .2s ease;
+
+                  &:hover{
+                      background: var(--blue-light);
+                      opacity: 1;
+                  }
+              }
+
+              .increment{
+                  right: 0;
+              }
+              .decrement{
+                  left: 0;
+              }
+
+
+              .closeMe{
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  padding: .8rem 1.2rem;
+                  border-radius: .2rem;
+                  color: white;
+                  font-weight: bold;
+                  cursor: pointer;
+                  background: var(--blue);
+                   transition: all .2s ease;
+                  &:hover{
+
+                      background: var(--reded);
+                  }
+
+              }
+
+              img{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+              }
+
+        }
+
+    }
+
     width: 100%;
     height: 100%;
     background:black !important;
@@ -9,6 +110,85 @@
          height: 100%;
          text-align: center;
          margin: 0 auto;
+
+         .GRID-GALLERY{
+         display: grid;
+         grid-gap: .5rem;
+         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+         grid-auto-rows: 200px auto;
+         background: rgba(255, 255, 255, 0.804);
+         backdrop-filter: blur(4px);
+         border: 1px solid var(--borders);
+         border-radius: 1rem;
+         min-height: 100%;
+         position: relative !important;
+         
+
+
+         img{
+             width: 100%;
+             height: 100%;
+             max-height: 25rem;
+             object-fit: cover;
+             transition: all .2s ease;
+             will-change: transform;
+             cursor: pointer;
+             &:hover{
+                 transform: scale(1.02);
+             }
+         }
+
+         .NOthing{
+             width: 100%;
+             height: 100%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+
+             h4{
+                 background: rgba(232, 165, 176, 0.74);
+                 padding:.8rem 1.6rem;
+                 border-radius:.3rem;
+             }
+         }
+ 
+         .shimmer2{
+            background: rgb(232, 232, 232);
+            width: 100%;
+            display: flex;
+            height: 35rem;
+            align-items: center;
+            justify-content: center;
+            color: var(--reded);
+            position: absolute;
+            border-radius:0rem;
+            left: 0;
+            top:0;
+            cursor: wait;
+            overflow: hidden;
+          
+            z-index: 2;
+            transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                border-radius:0rem;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                z-index: 5;
+         transform: translateX(-100%);
+        animation: shimmer 1.2s linear infinite forwards;
+        background: linear-gradient(90deg , rgba(213, 211, 211, 0) 30%, rgba(255, 255, 255, 0.489) 70%, rgba(255, 255, 255, 0.749) 100%);
+    }
+    
+    
+        }
+
+
+        }
 
         .GHead{
             height: 12rem;
@@ -56,10 +236,13 @@
     }
     
     .insideGallery{
-      height: 40rem;
+      min-height: 35rem;
       background-color: rgb(25, 25, 25);
       width: 100%;
+      height: 100%;
       border: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: .5rem;
+      position:  relative !important;
     }
     
 

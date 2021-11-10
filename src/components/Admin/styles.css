@@ -82,10 +82,6 @@
   height: 1.8rem;
 }
 
-.admin .admin-menu .dashLinks .dashLink:nth-of-type(2) {
-  background: #2c3344;
-}
-
 .admin .admin-menu .dashLinks .dashLink:hover {
   background: #2c3344;
 }
@@ -493,7 +489,6 @@
 }
 
 .admin .admin-container .recentGallery svg {
-  width: 2rem;
   color: rgba(255, 255, 255, 0.829);
 }
 
@@ -588,6 +583,12 @@
           justify-content: center;
 }
 
+.admin .admin-container .recentNews .rowSingle .rowMore svg {
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+
 .admin .admin-container .recentNews .rowSingle div {
   width: 25%;
 }
@@ -609,5 +610,721 @@
   height: 2rem;
   max-width: 3rem;
   cursor: pointer;
+}
+
+.newsLoader {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 6rem 0;
+}
+
+.adminSetting {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--black);
+}
+
+.adminSetting .settingContainer {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.adminSetting .settingContainer .settingTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+
+.adminSetting .settingContainer .settingTitle svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.adminSetting .settingContainer .settingTitle .setting-t {
+  font-size: 3rem;
+  font-weight: var(--nzito);
+}
+
+.adminSetting .settingContainer .creatNews {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  width: 50%;
+  background-color: white;
+  border: 1px solid var(--borders);
+  padding-top: 3rem;
+}
+
+.adminSetting .settingContainer .creatNews .editProfileSetting {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 10rem;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.adminSetting .settingContainer .creatNews .editProfileSetting img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.adminSetting .settingContainer .creatNews .createTitle {
+  margin: 0 auto;
+  width: 100%;
+  margin: 2.5rem 0;
+}
+
+.adminSetting .settingContainer .creatNews .createTitle button {
+  width: 100%;
+  height: 5rem;
+  outline: none;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background-color: var(--blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--white);
+}
+
+.adminSetting .settingContainer .creatNews .createTitle button:hover {
+  opacity: .88;
+}
+
+.adminSetting .settingContainer .creatNews .createTitle .lable {
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.adminSetting .settingContainer .creatNews .uploadBox {
+  position: relative;
+}
+
+.adminSetting .settingContainer .creatNews .uploadBox:hover::after {
+  opacity: .8;
+}
+
+.adminSetting .settingContainer .creatNews .uploadBox input {
+  opacity: 0;
+  cursor: pointer;
+  font-weight: normal !important;
+}
+
+.adminSetting .settingContainer .creatNews .uploadBox input::-webkit-input-placeholder {
+  opacity: .9;
+}
+
+.adminSetting .settingContainer .creatNews .uploadBox input:-ms-input-placeholder {
+  opacity: .9;
+}
+
+.adminSetting .settingContainer .creatNews .uploadBox input::-ms-input-placeholder {
+  opacity: .9;
+}
+
+.adminSetting .settingContainer .creatNews .uploadBox input::placeholder {
+  opacity: .9;
+}
+
+.adminSetting .settingContainer .creatNews .uploadBox::after {
+  content: 'Update Profile Photo';
+  position: absolute;
+  top: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  pointer-events: none;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  background: var(--admin-red);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.adminSetting .settingContainer .creatNews input {
+  width: 100%;
+  height: 5rem;
+  border-radius: 5rem;
+  outline: none;
+  text-align: start;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  border: 1px solid grey;
+  font-size: 1.7rem;
+}
+
+.adminSetting .settingContainer .creatNews input:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.lockedBtn {
+  cursor: disabled;
+  opacity: .5;
+}
+
+.updateProfileErrors {
+  color: #de3a3a;
+  font-weight: bold;
+}
+
+.success {
+  padding: 2rem;
+  border-radius: .8rem;
+  color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #06a206;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+#activeAdminTab {
+  background-color: #2c3344 !important;
+}
+
+.newPostBox {
+  position: relative;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: black;
+  z-index: 4;
+}
+
+.newPostBox .erro-show-box {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--admin-red) !important;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.newPostBox .newPostInside {
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding-bottom: 3rem;
+}
+
+.newPostBox .newPostInside .inputBody {
+  height: 15rem;
+}
+
+.newPostBox .newPostInside h2 {
+  font-weight: var(--nzito);
+  padding: 2rem 0;
+  color: var(--black);
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 4.8rem;
+}
+
+.newPostBox .newPostInside form {
+  margin: 0 auto;
+  width: 80%;
+  color: var(--black);
+}
+
+.newPostBox .newPostInside form .lable {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.newPostBox .newPostInside form .UPL {
+  position: relative;
+  height: 15rem;
+  margin-top: .3rem;
+  cursor: pointer;
+}
+
+.newPostBox .newPostInside form .UPL input {
+  padding: 0 !important;
+  height: 15rem;
+}
+
+.newPostBox .newPostInside form .UPL svg {
+  width: 4.5rem;
+  max-height: 5rem;
+  fill: white;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.newPostBox .newPostInside form .UPL::after {
+  content: "Picture (optional)";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+  background: var(--admin-red);
+  font-size: 1.6rem;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+  cursor: pointer;
+  top: 0;
+  font-weight: bold;
+}
+
+.newPostBox .newPostInside form .UPL::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 28%;
+  background: var(--reded);
+  font-size: 1.6rem;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+  cursor: pointer;
+  bottom: 0;
+  z-index: 3;
+  font-weight: bold;
+}
+
+.newPostBox .newPostInside form .uploadDocument::after {
+  content: "Document (optional)";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--admin-red);
+  font-size: 1.6rem;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+  cursor: pointer;
+  top: 0;
+  font-weight: bold;
+}
+
+.newPostBox .newPostInside form button {
+  width: 100%;
+  height: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: .5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 900;
+}
+
+.newPostBox .newPostInside form input {
+  padding: .8rem 2rem;
+  height: 7rem;
+  margin-bottom: 1.8rem;
+  width: 100%;
+  border-radius: .2rem;
+  outline: none;
+  font-size: 1.7rem;
+  border: 2px solid var(--reded);
+}
+
+.waitLoader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 500;
+  background: rgba(255, 255, 255, 0.619);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+.waitTextLoader {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--admin-red) !important;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.updatePostContainer select {
+  width: 100%;
+  height: 5rem;
+  background: white;
+}
+
+.exam-results-page {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.exam-results-page svg {
+  width: 3rem;
+}
+
+.exam-results-page .examRt {
+  font-size: 2.5rem;
+  font-weight: var(--nzito);
+  padding: 4rem  0 0 0;
+  background: var(--admin-bg);
+  width: 100%;
+  text-align: center;
+}
+
+.exam-results-page .examsResultInside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.exam-results-page .examsResultInside .applicationFormBox {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4rem;
+  background: var(--admin-bg);
+  padding-top: 3rem;
+}
+
+.exam-results-page .examsResultInside .applicationFormBox a {
+  padding: .8rem 1rem;
+  border-radius: .3rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  background: var(--blue);
+  margin-top: .5rem;
+}
+
+.exam-results-page .examsResultInside .applicationFormBox a:hover {
+  background: var(--blue-light);
+}
+
+.exam-results-page .examsResultInside .applicationFormBox h3 {
+  margin-bottom: 3rem;
+  font-weight: var(--nzito);
+  font-size: 2.5rem;
+}
+
+.exam-results-page .examsResultInside .applicationFormBox img {
+  width: 14rem;
+}
+
+.exam-results-page .examsResultInside .uploadExams {
+  padding: 1.4rem 1.8rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin: 0 auto;
+  background: var(--blue);
+  border-radius: .5rem;
+  margin: 1rem 0;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.exam-results-page .examsResultInside .uploadExams:hover {
+  background: var(--blue-light);
+}
+
+.exam-results-page .examsResultInside h2 {
+  color: var(--black);
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 2.3rem;
+  font-weight: var(--nzito);
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+
+.exam-results-page .examsResultInside .no-exam {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--admin-red);
+}
+
+.exam-results-page .examsResultInside .academic-calder {
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  border-radius: .5rem;
+  color: black;
+  margin-top: .8rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.exam-results-page .examsResultInside .academic-calder embed {
+  height: 40rem !important;
+}
+
+.exam-results-page .examsResultInside .academic-calder .download-ac-calender {
+  padding: .8rem 1rem;
+  border-radius: .3rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  background: var(--blue);
+}
+
+.exam-results-page .examsResultInside .academic-calder .download-ac-calender:hover {
+  background: var(--blue-light);
+}
+
+.exam-results-page .examsResultInside .containerRESULTS {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-top: 3rem;
+  color: var(--black);
+}
+
+.exam-results-page .examsResultInside .containerRESULTS .result-class .deleteResult {
+  padding: 1.2rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--white);
+  background: var(--blue);
+  border-radius: .3rem;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.exam-results-page .examsResultInside .containerRESULTS .result-class .deleteResult:hover {
+  background: var(--admin-red);
+}
+
+.exam-results-page .examsResultInside .containerRESULTS .result-class h4 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.exam-results-page .examsResultInside .containerRESULTS .result-class .National, .exam-results-page .examsResultInside .containerRESULTS .result-class .other {
+  margin-bottom: 3rem;
+}
+
+.exam-results-page .examsResultInside .containerRESULTS .res-bx {
+  margin-top: 1.5rem;
+}
+
+.exam-results-page .examsResultInside .containerRESULTS img {
+  width: 7rem;
+  cursor: pointer;
+}
+
+.logoutOuot {
+  padding: .6rem 1rem;
+  background: var(--admin-red);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: .6rem;
 }
 /*# sourceMappingURL=styles.css.map */

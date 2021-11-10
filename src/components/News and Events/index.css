@@ -3,6 +3,10 @@
   height: 100%;
 }
 
+.no-news {
+  color: var(--red) !important;
+}
+
 .wrapper {
   background-size: cover;
   background-repeat: no-repeat;
@@ -151,5 +155,13 @@
 
 .paginationNews .buttonPage:hover {
   background: var(--blue-light);
+}
+
+.activeMe {
+  background: var(--blue-light) !important;
+}
+
+html body .newsEvents .singlePostBox {
+  text-align: center !important;
 }
 /*# sourceMappingURL=index.css.map */

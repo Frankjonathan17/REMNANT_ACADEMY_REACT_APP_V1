@@ -1,0 +1,43 @@
+.SINGLE-POST{
+
+
+    .singleNcontainer{
+        width: 70%;
+        background:var(--grey);
+        border: 1px solid var(--borders);
+        min-height: 50rem !important;
+    
+        margin: 0 auto;
+        color: var(--black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 4rem 1.8rem 1rem 1.8rem;
+        padding-bottom: 3rem;
+
+        .TITLE-{
+            h2{
+                margin-bottom: 2rem;
+                font-weight: var(--nzito);
+            }
+            
+
+        }
+        .bodyd{
+
+            margin-bottom: 3rem;
+            p{
+                font-size: 1.8rem;
+            }
+        }
+        .FIlatat{
+
+            img{
+                width: 10rem;
+                object-fit: contain;
+            }
+        }
+    }
+
+}

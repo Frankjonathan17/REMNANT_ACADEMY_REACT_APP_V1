@@ -1,0 +1,146 @@
+.singlePostS {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: black;
+}
+
+.singlePostS .M-TITLE {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.singlePostS .M-TITLE h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--dark-blue);
+}
+
+.singlePostS .M-TITLE svg {
+  width: 2.5rem;
+  max-height: 4rem;
+  margin-right: .8rem;
+}
+
+.singlePostS .typePics img {
+  width: 8rem;
+  height: auto;
+  max-height: 9rem;
+}
+
+.singlePostS .image-attached {
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.singlePostS .image-attached img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: .5rem;
+}
+
+.singlePostS .back-to-news {
+  border-radius: .5rem;
+  padding: .8rem 1.5rem;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.7rem;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  background: var(--blue);
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.singlePostS .back-to-news:hover {
+  background: var(--blue-light);
+}
+
+.singlePostS .container-singleP {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.singlePostS .container-singleP h2 {
+  font-weight: var(--nzito);
+}
+
+.singlePostS .container-singleP .mainp {
+  background: white;
+  width: 80%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2rem;
+  border-radius: .5rem;
+}
+
+.singlePostS .container-singleP .mainp h3 {
+  padding-bottom: 1.8rem;
+}
+
+.singlePostS .container-singleP .mainp p {
+  margin-bottom: .8rem;
+}
+
+.singlePostS .container-singleP .mainp .FILEORPIC .no-media-post h4 {
+  color: var(--admin-red);
+}
+/*# sourceMappingURL=single.css.map */

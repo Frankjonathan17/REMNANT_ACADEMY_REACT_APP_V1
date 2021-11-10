@@ -1,0 +1,71 @@
+
+   .examRt{
+    font-size: 2.5rem;
+    font-weight: var(--nzito);
+    padding: 4rem  0 0 0;
+    background: var(--admin-bg);
+    width: 100%;
+    text-align: center;
+}
+
+   .examsResultInside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   }
+
+
+   .containerRESULTS{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 3rem;
+    color: var(--black);
+    padding: 2.4rem;
+
+   
+    .result-class{
+
+       .deleteResult{
+           padding: 1.2rem 1.5rem;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           color: var(--white);
+           background: var(--blue);
+           border-radius: .3rem;
+           cursor: pointer;
+           width: fit-content;
+           transition: all .3s ease;
+
+           &:hover{
+               background: var(--admin-red);
+           }
+          
+       }
+
+       h4{
+           font-weight: 900;
+           font-size: 2rem;
+           margin-bottom: 2rem;
+           
+       }
+
+        .National,.other{
+            margin-bottom: 3rem;
+        }
+    }
+
+ .res-bx{
+     margin-top: 1.5rem;
+ }
+
+
+    img{
+        width: 7rem;
+        cursor: pointer;
+    }
+}   
+

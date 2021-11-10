@@ -16,82 +16,141 @@ import Welcome from './components/Welcome';
 import MidleSchool from './components/MiddleSchool';
 import UpperSchool from './components/UperSchool';
 import BabySchool from './components/BabySchool';
+import axios from 'axios'
 import Gallery from './components/Gallery';
 import OnlineServices from './components/Online Services';
 import Admin from './components/Admin';
+import PhilosophyAndValue from './components/philosophyAndValue';
+import SinglePost from './components/SinglePost';
+import ApplicationForm from './components/Application Form';
+import Perfomance from './components/Perfomance';
+import SchoolLife from './components/SchoolLife';
+import VisionMission from './components/Vision and Mission';
+import Opportunities from './components/Opportunities';
+import Visit from './components/Visit Map Address';
 class  App extends React.Component{
 
   state ={
-    clonedSlider:'',
     OnlineServices:false,
-    logedIn:false
+    user:[]
   }
 
 
-  HeadScroll=()=>{
-    console.log('scrolling')
-    if(window.scrollY>148){
-        document.querySelector('.MainHeadWrap').classList.add('fixedHead')       
+  // HeadScroll=()=>{
+  //   console.log('scrolling')
+  //   if(window.scrollY>148){
+  //  this.overlayMain.current.classList.add('fixedHead')       
+  //   }
+  //   else{
+  //     this.overlayMain.current.classList.remove('fixedHead')
+  //   }
+  //   }
+
+    setUser=(user)=>{
+     
+      let us = user
+      let copy =user
+      if(!copy.photo){
+        copy.photo=''
+      }
+      if(!us.photo){
+        us.photo=''
+      }
+      us.photo=''
+      this.setState({user:copy})
+
+      localStorage.removeItem('user')
+      window.localStorage.setItem('user', JSON.stringify(us))
+      setTimeout(() => {
+        window.location.reload()
+      }, 20)
+      // window.localStorage.removeItem('User')
+     // let binary = `data:image/png;base64,`+ new Buffer(user.photo.data).toString('base64')
+      // let newuser = user
+      // newuser.photo=''
+      // let userr = window.localStorage.getItem('User');
+      // let usern = JSON.parse(userr)
+      // window.localStorage.setItem('User', JSON.stringify(newuser))
+      // window.localStorage.setItem('ameingia', true)
+    //  checkUpdates()
+     
     }
-    else{
-        document.querySelector('.MainHeadWrap').classList.remove('fixedHead')
-    }
-    }
+
+    checkUpdates = async()=>{
+      let user = window.localStorage.getItem('user')
+        let pure = JSON.parse(user);
+      try{
+     let result = await axios.post('/api/login',{
+       password:pure.password,
+       email:pure.email})
+      this.setState({user:result.data.profile})
+
+     
+     }catch(er){
+         console.log('shida ya kufecth ',er)
+      }
+   } 
+
+
+   
+helper=(state)=>{
+  this.setState({...state})
+}
+
+
 
   setOnlineService=(OnlineServices)=>{
            this.setState({OnlineServices})
            if(OnlineServices===false){
-             window.addEventListener('scroll', this.HeadScroll)
+            //  window.addEventListener('scroll', this.HeadScroll)
            } else{
-            window.removeEventListener('scroll', this.HeadScroll)
+            // window.removeEventListener('scroll', this.HeadScroll)
           }
   }    
  
 
   changeLogin=()=>{
-    if(window.localStorage.getItem('ameingia')){
-      window.localStorage.removeItem('ameingia');
-      this.setState({logedIn:false})
+    if(window.localStorage.getItem("user")){
+      window.localStorage.removeItem('user');
+       this.setState({user:[]})
     }
+
     else{
-      this.setState({logedIn:true})
+           return
     }
   }
 
   componentDidMount(){
 
+ 
+    this.overlayMain = React.createRef()
+
     this.setOnlineService(false)
+    
+    
+    let user = window.localStorage.getItem('user')
+    console.log('user ni ',user)
 
-    let logged = window.localStorage.getItem('ameingia');
-    if(!logged) {
-      this.setState({logedIn:false})
-      return
-    }
-    else{
-      this.setState({logedIn:true})
+    if(user){
+      this.setState({user:JSON.parse(user)})
+      
     }
 
+    // this.checkUpdates();
     setTimeout(() => {
     let links = document.querySelectorAll('a');
     links.forEach(l=>{
             l.addEventListener('click', function(){
              setTimeout(() => {
               window.scrollTo(0,0)
-             }, 50);
+             }, 10);
             })
     })
     }, 1000);
+
   }
 
-// returnCommon=()=>{
-
-//  if(this.state.OnlineServices===false){
-//    return  (
-      
-//    )
-//  }
-
- // }
+  // ends of DID-MOUNT
 
   ReturnFooter=()=>{
            if(this.state.OnlineServices===false){
@@ -103,12 +162,14 @@ class  App extends React.Component{
   return (
     <div className="wrapper">
      
-      <div className="overlayMain"> </div>
+    {this.state.OnlineServices===false && <div className="overlayMain" ref={this.overlayMain} > </div>}
+     
        {
            this.state.OnlineServices ===false && (
             <React.Fragment>
             <MobileMenu/>
      <Header/>
+     <div className='SPACEH' style={{height:'12.9rem'}}></div>
          </React.Fragment>
            ) 
           
@@ -126,8 +187,27 @@ class  App extends React.Component{
             <Route path='/upper-school' component={UpperSchool}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/gallery' component={Gallery}/>
-            <Route path='/online-services' render={(props)=> <OnlineServices changeLogin={this.changeLogin} loggedIn={this.state.logedIn} setOnlineService={this.setOnlineService} {...props}/>}/>
-            <Route path='/admin' render={(props)=> <Admin changeLogin={this.changeLogin} logedIn={this.state.logedIn} setOnlineService={this.setOnlineService} {...props}/>}/>
+            <Route path='/philosophy-value' component={PhilosophyAndValue}/>
+            <Route path='/single-post/:postid' component={SinglePost}/>
+            <Route path='/application-form' component={ApplicationForm}/>
+            <Route path='/perfomance' component={Perfomance}/>
+            <Route path='/school-life' component={SchoolLife}/>
+            <Route path='/mission-vision' component={VisionMission}/>
+            <Route path='/opportunities' component={Opportunities}/>
+            <Route path='/visit' component={Visit}/>
+            <Route path='/online-services' render={(props)=> <OnlineServices
+              user={this.state.user}
+               setUser={this.setUser} 
+               changeLogin={this.changeLogin} 
+               setOnlineService={this.setOnlineService} 
+               {...props}/>}/>
+
+            <Route path='/admin'  render={(props)=> <Admin
+              helper={this.helper}
+             user={this.state.user}  
+            setUser={this.setUser}  changeLogin={this.changeLogin} 
+            logedIn={this.state.logedIn} setOnlineService={this.setOnlineService} 
+            {...props}/>}/>
             <Route exact path='/' render={(props)=><Home  clonedSlider={this.state.clonedSlider} {...props}/>}/>
           </Switch>
          <React.Fragment>

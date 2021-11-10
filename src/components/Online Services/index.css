@@ -153,6 +153,10 @@
   margin-bottom: 2.5rem;
 }
 
+.onlinePortal .onlineInside form {
+  text-align: start;
+}
+
 .onlinePortal .onlineInside form .oneInput {
   margin-bottom: 2rem;
 }
@@ -160,8 +164,31 @@
 .onlinePortal .onlineInside form input {
   padding: 1.5rem 2.8rem;
   width: 100%;
-  font-size: 1.8rem;
   font-weight: 600;
+}
+
+.onlinePortal .onlineInside form input::-webkit-input-placeholder {
+  color: black;
+  font-weight: normal;
+}
+
+.onlinePortal .onlineInside form input:-ms-input-placeholder {
+  color: black;
+  font-weight: normal;
+}
+
+.onlinePortal .onlineInside form input::-ms-input-placeholder {
+  color: black;
+  font-weight: normal;
+}
+
+.onlinePortal .onlineInside form input::placeholder {
+  color: black;
+  font-weight: normal;
+}
+
+.onlinePortal .onlineInside form input:focus {
+  font-size: 1.6rem;
 }
 
 .onlinePortal .onlineInside form label {

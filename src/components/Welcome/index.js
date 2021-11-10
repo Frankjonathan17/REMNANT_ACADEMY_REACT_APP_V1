@@ -56,10 +56,12 @@ class Welcome extends React.Component {
 
 
                     <h4 className="titless">MISSION AND VISION</h4>
-                    <p>mission and vision is here</p>
+                    <p>our mission is 10 to 1</p>
 
-                    <h4 className="titless">SCHOOL HISTORY</h4>
-                    <p>school History is here</p>
+                    <p style={{color:'var(--red)'}}> <Link to='/philosophy-value'>read our value and philosophy</Link> </p>
+
+                    {/* <h4 className="titless">SCHOOL HISTORY</h4>
+                    <p>school History is here</p> */}
 
                     <h4 className="titless">SCHOOL PERFOMANCE</h4>
                     <p>Remnant is  raising very fast on top of others school within and 

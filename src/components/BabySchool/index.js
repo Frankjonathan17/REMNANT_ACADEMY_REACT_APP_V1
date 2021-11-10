@@ -130,7 +130,7 @@ class BabySchool extends React.Component {
                               <h3>KISWAHILI</h3>
                               <div className='curLists'>
                                  <p> <span className='dott'></span> We introduce swahili  to students in 
-                                  order to create Sawareness for mastering  Swahili at this age </p>
+                                  order to create strong foundation for mastering  Swahili at this age </p>
                                  <p> <span className='dott'></span>  Students are  going to get good at writting and pronouncing swahili words in fluently way.
                                   </p>
                                  

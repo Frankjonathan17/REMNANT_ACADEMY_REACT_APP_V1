@@ -1,0 +1,473 @@
+.newsEventAdmin, .GalleryAdmin {
+  color: var(--black);
+  width: 100%;
+}
+
+.newsEventsAdminInside {
+  width: 100%;
+}
+
+.newsEventsAdminInside svg {
+  width: 2.2rem;
+}
+
+.newsEventsAdminInside .sortBy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.newsEventsAdminInside .sortBy .activeSort {
+  background: var(--blue-light);
+  color: white;
+}
+
+.newsEventsAdminInside .sortBy .soRtingBOX {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem .4rem;
+}
+
+.newsEventsAdminInside .sortBy .sortTitle {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-right: .5rem;
+}
+
+.newsEventsAdminInside .sortBy .sort {
+  padding: .8rem 2rem;
+  margin: 0 .4rem;
+  cursor: pointer;
+}
+
+.newsEventsAdminInside h3 {
+  font-weight: var(--nzito);
+  text-transform: uppercase;
+}
+
+.newsEventsAdminInside .headAdminNE {
+  padding: 3rem 0;
+  width: 90%;
+  margin: 0 auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newsEventsAdminInside .headAdminNE .addEventNews {
+  padding: .8rem 1.3rem;
+  border-radius: .4rem;
+  cursor: pointer;
+  background: var(--blue-light);
+  font-weight: bold;
+  color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newsEventsAdminInside .headAdminNE .addEventNews svg {
+  width: 2rem;
+  margin-right: .3rem;
+}
+
+.newsEventsAdminInside .headAdminNE .searchNews input {
+  padding: 1rem 3.5rem;
+}
+
+.filteredNewsContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.filteredNewsContainer table {
+  width: 100%;
+  padding: 1rem .8rem;
+  text-align: center;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: white !important;
+}
+
+.filteredNewsContainer table thead th {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  padding: 2rem 0;
+}
+
+.filteredNewsContainer table thead th:nth-of-type(1) {
+  background: var(--blue-light);
+}
+
+.filteredNewsContainer table thead th:nth-of-type(2) {
+  background: var(--green-lighter);
+}
+
+.filteredNewsContainer table thead th:nth-of-type(3) {
+  background: #067db0;
+}
+
+.filteredNewsContainer table thead th:nth-of-type(4) {
+  background: var(--yellowOg);
+}
+
+.filteredNewsContainer table thead th:nth-of-type(5) {
+  background: var(--admin-red);
+}
+
+.filteredNewsContainer table tbody tr {
+  margin-bottom: 1rem;
+  color: var(--dark-blue);
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  height: 8.5rem;
+  border-color: #e2e8f0 !important;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.filteredNewsContainer table tbody tr:hover {
+  background: var(--blue-light);
+}
+
+.filteredNewsContainer table tbody tr td {
+  border-right: 2px solid #e2e8f0;
+  padding: 0 1rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.filteredNewsContainer table tbody tr td:hover {
+  background: rgba(236, 236, 236, 0.621);
+}
+
+.filteredNewsContainer table img {
+  width: 6rem;
+  height: 3rem;
+}
+
+.mobileTableAdmin {
+  display: none;
+}
+
+.mobileTableAdmin .single-m-a-t {
+  padding: 1.3rem .2rem;
+  border-radius: .5rem;
+  margin-bottom: .8rem;
+  text-align: start;
+}
+
+.mobileTableAdmin .single-m-a-t .click-t-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 100%;
+  cursor: pointer;
+  background: var(--green-lighter);
+}
+
+.mobileTableAdmin .single-m-a-t .title-lable {
+  padding-left: 1rem;
+  background: #07468a;
+  color: white;
+  padding: 1rem 1rem;
+}
+
+.mobileTableAdmin .single-m-a-t .title-text p {
+  padding: 1rem 0rem 1rem 1rem;
+  background: #135aa5;
+  color: white;
+}
+
+.mobileTableAdmin .single-m-a-t p {
+  font-size: 1.4rem;
+}
+
+.mobileTableAdmin .single-m-a-t .filt-t {
+  margin-bottom: 1rem;
+}
+
+.mobileTableAdmin .single-m-a-t .he {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.mobileTableAdmin .single-m-a-t .single-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #1c63b5;
+  color: white;
+}
+
+.mobileTableAdmin .single-m-a-t .single-action .tye {
+  width: 100%;
+  padding: .3rem .5rem;
+  text-align: start;
+}
+
+.mobileTableAdmin .single-m-a-t .single-action img {
+  width: 4rem;
+}
+
+.no-news {
+  padding: 8rem 0rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  width: 90%;
+  border-radius: 1.5rem;
+}
+
+.no-news h3 {
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+  color: var(--admin-red);
+}
+
+.updatePostContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: .5rem;
+  background: #ffffffde;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 980;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--black);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem 0;
+}
+
+.updatePostContainer .lable {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.updatePostContainer button {
+  padding: 2rem 3rem;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  background: var(--admin-red);
+  border: none;
+  margin-top: 1rem;
+  width: 100%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.updatePostContainer button:hover {
+  background: var(--red);
+}
+
+.updatePostContainer h2 {
+  text-align: center;
+  width: 100%;
+  font-weight: var(--nzito);
+}
+
+.updatePostContainer .updatePostInside {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.updatePostContainer .updatePostInside .inputBody {
+  height: 12rem;
+}
+
+.updatePostContainer .cancel-update {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.updatePostContainer .cancel-update svg {
+  width: 4rem;
+  max-height: 5rem;
+}
+
+.updatePostContainer input {
+  padding: 2rem 3rem;
+  border-radius: .5rem;
+  font-size: 1.6rem;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.fade-white-bg {
+  background: rgba(0, 0, 0, 0.61);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+}
+
+.PROMPT {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 700;
+  width: 40rem;
+  height: 30rem;
+  background: rgba(255, 255, 255, 0.79);
+  border-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.PROMPT h3 {
+  color: var(--black);
+  font-weight: 900;
+}
+
+.PROMPT div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3rem;
+}
+
+.PROMPT .no {
+  background: #0a9441 !important;
+}
+
+.PROMPT button {
+  padding: 1.8rem 4.5rem;
+  margin-right: 1rem;
+  outline: none;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  color: var(--white);
+  background: var(--admin-red);
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.REFRESH {
+  padding: .8rem 1.5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  background: #067db0;
+  color: var(--white);
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.TaskSvg {
+  background: var(--admin-bg) !important;
+  cursor: pointer;
+  font-weight: bold;
+}
+/*# sourceMappingURL=index.css.map */

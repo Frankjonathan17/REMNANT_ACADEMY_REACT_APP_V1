@@ -84,7 +84,7 @@ class StudiesOffered extends React.Component {
 <div className="studies">
 
 <div className="studies_inside">
-  <h1>STUDIES OFFERED </h1>
+  <h1>GENERAL STUDIES OFFERED </h1>
   <div className="table">
     <div className="tableTabs">
       <div className="tab" id="eng">English</div>

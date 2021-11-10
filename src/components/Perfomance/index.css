@@ -1,1 +1,85 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+.examRt {
+  font-size: 2.5rem;
+  font-weight: var(--nzito);
+  padding: 4rem  0 0 0;
+  background: var(--admin-bg);
+  width: 100%;
+  text-align: center;
+}
+
+.examsResultInside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.containerRESULTS {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-top: 3rem;
+  color: var(--black);
+  padding: 2.4rem;
+}
+
+.containerRESULTS .result-class .deleteResult {
+  padding: 1.2rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--white);
+  background: var(--blue);
+  border-radius: .3rem;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.containerRESULTS .result-class .deleteResult:hover {
+  background: var(--admin-red);
+}
+
+.containerRESULTS .result-class h4 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.containerRESULTS .result-class .National, .containerRESULTS .result-class .other {
+  margin-bottom: 3rem;
+}
+
+.containerRESULTS .res-bx {
+  margin-top: 1.5rem;
+}
+
+.containerRESULTS img {
+  width: 7rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=index.css.map */

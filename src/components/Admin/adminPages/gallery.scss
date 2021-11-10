@@ -1,0 +1,297 @@
+.GalleryAdmin{
+    width: 100%;
+    height:fit-content;
+
+
+    .Gallery-inside{
+        padding-top: 3rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        form{
+           
+
+            #imgUpload{
+    
+                width: 100%;
+                height: 6rem;
+            }
+        }
+
+        h1{
+            font-weight: var(--nzito);
+
+            svg{
+                width: 3rem;
+                max-height: 5rem;
+                fill: var(--blue-light);
+            }
+        }
+
+        button{
+            padding: 1.5rem 2rem;
+            border-radius: .4rem;
+            outline: none;
+            border: none;
+            text-align: center;
+            font-weight: 600;
+            line-height:normal;
+            cursor: pointer;
+            transition: all .3s ease;
+            background:var(--blue-light);
+            font-size: 1.7rem;
+            color: white;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+
+            &:hover{
+                background: var(--blue-light);
+            }
+        }
+        
+        .Gallery-container{
+            width:98%;
+            margin: 0 auto;
+            height: 100%;
+            background: var(--white);
+
+ 
+  .MAIN-GRID{
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: repeat(auto-fill,minmax(13.5rem,1fr));
+    grid-auto-rows: 200px auto;
+    background: white;
+    border: 1px solid var(--borders);
+    border-radius:1rem;
+
+ 
+
+    .PIC-S-G{
+        margin-right: .5rem;
+        overflow: hidden;
+        will-change: transform;
+        transition: all .3s ease;
+        border-radius: .3rem;
+        img{
+            width: 100%;
+            border-radius: .3rem;
+            height: 100%;
+            cursor: pointer;
+           object-fit: cover;
+           will-change: transform;
+           transition: all .3s ease;
+           &:hover{
+               transform: scale(1.02);
+           }
+
+        }
+    }
+  }
+
+        .no-images{
+            background: white;
+            border-radius: .5rem;
+            border:1px solid var(--borders);
+            color:black;   
+            width: 100%;
+            height: 5rem;
+            position: relative;
+            z-index: 55;         
+        }
+
+
+        }
+    }
+
+}
+
+
+.imgUploadParent{
+    position: relative !important;
+    height: 8rem;
+    border-radius: .3rem;
+    margin-top: 4rem;
+
+    &::after{
+        content: "Click here to upload";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background: rgb(27, 89, 155);
+        color: white;
+        font-size: 1.7rem;
+        font-weight: normal;
+        text-align: center;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         pointer-events: none !important;
+    }
+}
+
+
+.savePbtn{
+    background: rgb(18, 64, 113) !important;
+}
+
+.thumbsImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    img{
+        width: 20;
+        height: auto;
+        max-height: 25rem;
+    }
+}
+
+
+@keyframes shimmer{
+    0%{transform:translateX(-100%);}
+    50%{transform:translateX(100%);}
+    100%{transform:translateX(100%);}
+}
+
+.viewLarge{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 500;
+    background: #f5f5f5eb;
+    border-radius: .5rem;
+    overflow: hidden;
+    backdrop-filter: blur(2px);
+    transform: translate(-50%,-50%);
+    width: 85%;
+    height: 88%;
+    max-height: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    
+
+    .actionsIMGPost{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+       .update,.delete{
+         opacity: .9;
+         transition: all .3s ease;
+         &:hover{
+             opacity: 1;
+         }
+        svg{
+            width: 2rem;
+            margin-right: .5rem;
+        }
+            display: inline-block;
+            margin-right: .8rem;
+            padding: .8rem 1.5rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            transition: all .3s ease;
+            color: white;
+            font-size: 1.7rem;
+            text-align: center;
+            background: var(--blue);
+            display: flex;
+            align-items:flex-start;
+            justify-content: center;
+            z-index: 400;
+            display: flex;
+        
+        }
+        .delete{
+            margin-right: 0;
+            background: var(--red);
+        }
+    }
+    
+    .caption{
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+        text-align: center;
+
+        p{
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            background: rgba(0, 0, 0, 0.683);
+            padding: .5rem 1rem;
+            border-radius: .4rem;
+            white-space: pre-wrap;
+        }
+    }
+
+    .exit-preview{
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: .8rem 1.5rem;
+        border-radius: .5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 600;
+        cursor: pointer;
+        transition: all .3s ease;
+        background: var(--admin-red);
+        color:white;
+        font-weight: bold;
+        font-size: 1.7rem;
+        &:hover{
+            background: rgb(196, 45, 45);
+        }
+    }
+
+    img{
+        width: 100%;
+        display: none;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .shimmer2,.shimmer{
+        background: rgb(232, 232, 232);
+        width: 100%;
+        height: 100%;
+        display:block;
+        cursor: wait;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            z-index: 5;
+     transform: translateX(-100%);
+    animation: shimmer 1.2s linear infinite forwards;
+    background: linear-gradient(90deg , rgba(213, 211, 211, 0) 30%, rgba(255, 255, 255, 0.489) 70%, rgba(255, 255, 255, 0.749) 100%);
+}
+
+
+    }
+}

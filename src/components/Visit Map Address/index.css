@@ -1,1 +1,42 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+.INNERVISION .visitMap {
+  width: 100%;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  padding-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.INNERVISION .list-to-do {
+  margin-left: 3rem;
+  margin-top: 3rem;
+}
+
+.INNERVISION .book-avisit {
+  margin-left: 3rem;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.INNERVISION .book-avisit p {
+  width: 80%;
+  font-size: 1.8rem;
+  margin-top: .8rem;
+}
+
+.INNERVISION .book-avisit::after {
+  content: '';
+  width: 2px;
+  height: 100%;
+  left: -1.8rem;
+  top: 0;
+  background: var(--red);
+  position: absolute;
+}
+
+.INNERVISION .book-avisit h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--red);
+}
+/*# sourceMappingURL=index.css.map */

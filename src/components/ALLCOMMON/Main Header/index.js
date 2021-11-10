@@ -227,20 +227,16 @@ openMenu=()=>{
                 Students
                  <div className="drop">
                     <div className="drop_inside">
-                   <Link className='menuDropLinks' to='/academic-calender'>
-                       <div className="m-link">Timetable</div></Link>
-                     <Link to='/timetables' className='menuDropLinks'>
+                     <Link to='/school-life' className='menuDropLinks'>
                      <div className="m-link">School life</div>
                           </Link> 
-                          <Link to='/activities' className='menuDropLinks'>
-                     <div className="m-link">Sports &amp; Activities</div>
-                          </Link> 
+                     
                           <Link to='/gallery' className='menuDropLinks'>
                      <div className="m-link">Gallery</div>
                           </Link> 
-                          <Link to='/resources' className='menuDropLinks'>
+                          {/* <Link to='/resources' className='menuDropLinks'>
                      <div className="m-link">E-Learning Resources</div>
-                          </Link> 
+                          </Link>  */}
                     </div>
                    </div>
                  </span>
@@ -305,7 +301,7 @@ openMenu=()=>{
                          <Link to='/mission-vision' className='menuDropLinks'>
                          <div className="m-link">Mission &amp; Vision</div> 
                            </Link>
-                           <Link to='/history' className='menuDropLinks'>
+                           <Link to='/philosophy-value' className='menuDropLinks'>
                            <div className="m-link">philosophy and values</div>
                            </Link>
                            <Link to='/perfomance' className='menuDropLinks'>

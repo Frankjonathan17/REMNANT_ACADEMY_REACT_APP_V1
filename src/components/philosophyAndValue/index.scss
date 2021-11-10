@@ -1,0 +1,37 @@
+.philosophyAndValue{
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 4rem;
+   
+
+    .phInside{
+
+        width: 80%;
+        margin: 0 auto;
+        background:var(--grey);
+        height: 100%;
+        .phHead{
+            width: 100%;
+            height: 8rem;
+            background-size: 120%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+       
+            justify-content: center;
+        }
+
+        .philosophyHead{
+            color: var(--dark-blue);
+            text-align: start;
+            padding: 2rem 3.8rem;
+
+
+            h2{
+                margin-top: 3rem;
+                font-weight: 900;
+            }
+            
+        }
+    }
+}

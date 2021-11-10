@@ -1,0 +1,29 @@
+.pagination{
+    width: fit-content;
+    height: fit-content;
+    padding: 3rem .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    .activePage{
+        background: var(--blue-light) !important;
+    }
+
+    button{
+        padding: 1.5rem 2.8rem;
+        background: var(--blue);
+        color: var(--white);
+        font-weight: bold;
+        outline: none;
+        border: none;
+        margin-right: .4rem;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover{
+            background: var(--blue-light);
+        }
+    }
+}

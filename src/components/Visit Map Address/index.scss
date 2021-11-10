@@ -1,0 +1,46 @@
+.INNERVISION{
+
+.visitMap{
+    width: 100%;
+    max-height: fit-content;
+    padding-bottom: 2rem;
+    margin-top: 4rem;
+}
+
+.list-to-do{
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+    .book-avisit{
+        margin-left: 3rem;
+        position: relative;
+        margin-top: 3rem;
+
+        
+        
+        p{
+            width: 80%;
+            font-size: 1.8rem;
+            margin-top: .8rem;
+        }
+
+    &::after{
+        content: '';
+        width: 2px;
+        height: 100%;
+        left: -1.8rem;
+        top: 0;
+        background: var(--red);
+        position: absolute;
+
+    }
+
+        h1{
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--red);
+        }
+    }
+    
+
+}

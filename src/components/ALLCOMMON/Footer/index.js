@@ -15,7 +15,7 @@ const Footer = () => {
                     <h2>ADDRESS</h2>
                        <div className="address">
                            <p id="increase">Remnant Academy</p>
-                           <p>P.O.Box 3149,</p>
+                           <p>P.O.Box 13911,</p>
                            <p> Dar-es-salaam,</p>
                            <p>Tanzania</p>
                   
@@ -24,7 +24,7 @@ const Footer = () => {
                         <div className="footerBox">
                           <h2>CONTACTS</h2>
                          <p>Head Master:<br/>   <a href="tel:+225625695113">0625695113</a> </p>
-                         <p>Admission: <br/>  <a href="tel:+255754423098">0754423098</a>  </p>
+                         <p>Manager: <br/>  <a href="tel:+255754423098">0754423098</a>  </p>
                          <p>Staff Number: <br/> <a href="tel:+255628007876">0628007876</a></p>
                     
                      
@@ -35,8 +35,8 @@ const Footer = () => {
                 <div className="footerBox">
                     <h2>SITE LINKS</h2>
                     <p> <Link to='/'>Home</Link> </p>
-                    <p><Link to='/admission'>Admission</Link> </p>
-                    <p><Link to='/academics'>Academics</Link> </p>
+                    <p><Link to='/admission-procedures'>Admission </Link> </p>
+                    <p><Link to='/academic-calender'>Academic Calender</Link> </p>
                     <p><Link to='/gallery'>Gallery</Link> </p>
                     <p><Link to='/online-services'>Online services</Link> </p>
                     <p><Link to='/application-form'>Application form</Link> </p>
@@ -54,8 +54,10 @@ const Footer = () => {
        </div>
     <div className="lastDiv">
 <div>
-    <div className="backTop" style={{cursor:'pointer'}}>
-     <strong>   Back Top &And;</strong>
+    <div
+    onClick={()=>window.scrollTo(0,0)}
+    className="backTop" style={{cursor:'pointer'}}>
+     <strong>   Back Top ^ </strong>
     </div>
 </div>
 <div>

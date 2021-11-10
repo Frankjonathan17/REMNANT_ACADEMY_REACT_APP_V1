@@ -8,7 +8,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 45rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background: var(--grey);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -19,8 +21,39 @@
           justify-content: space-evenly;
 }
 
+.academicCalender .LOADERl {
+  padding: 4rem .8rem;
+  background: white;
+  border-radius: .5rem;
+  margin: 3rem 0;
+  height: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+}
+
+.academicCalender .emmbedContainer {
+  width: 80%;
+  height: 80rem;
+  background: white;
+  border-radius: .3rem;
+  overflow: hidden;
+  border: 1px solid var(--borders);
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .academicCalender h2 {
   width: 93%;
+  padding-top: 6rem;
   text-align: center;
   margin: 0 auto;
   color: var(--dark-blue);

@@ -1,0 +1,423 @@
+.newsEventAdmin,.GalleryAdmin{
+    color: var(--black);
+   width: 100%;
+//    svg{
+//     width: 2.2rem;
+// }
+}
+
+
+.newsEventsAdminInside{
+
+       svg{
+    width: 2.2rem;
+}
+    .sortBy{
+      display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .activeSort{
+            background:var(--blue-light);
+            color: white;
+
+        }
+
+        .soRtingBOX{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem .4rem;
+        }
+
+
+        .sortTitle{
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-right: .5rem;
+        }
+
+        .sort{
+            padding: .8rem 2rem;
+            margin: 0 .4rem;
+            cursor: pointer;
+        }
+    }
+    h3{
+        font-weight: var(--nzito);
+        text-transform: uppercase;
+    }
+width: 100%;
+
+    .headAdminNE{
+        padding: 3rem 0;
+        width: 90%;
+        margin: 0 auto;
+        height: fit-content;
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        .addEventNews{
+            padding: .8rem 1.3rem;
+            border-radius: .4rem;
+            cursor: pointer;
+            background: var(--blue-light);
+            font-weight: bold;
+            color: var(--white);
+            svg{
+                width: 2rem;
+                margin-right: .3rem;
+            }
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .searchNews{
+           
+            input{
+               padding: 1rem 3.5rem;
+            }
+        }
+    }
+    
+}
+
+
+
+.filteredNewsContainer{
+    width: 90%;
+
+    margin: 0 auto;
+
+    table{
+        width: 100%;
+        padding: 1rem .8rem;
+        text-align: center;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: white !important;
+
+        thead{
+        
+            th{
+                
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                cursor: pointer;
+                text-align: center;
+               
+                color: white;
+                padding: 2rem 0;
+                
+                &:nth-of-type(1){
+                    background:var(--blue-light);
+                }
+                &:nth-of-type(2){
+                    background:var(--green-lighter);
+                }
+                &:nth-of-type(3){
+                    background:#067db0;
+                }
+                &:nth-of-type(4){
+                    background:var(--yellowOg);
+                }
+                &:nth-of-type(5){
+                    background:var(--admin-red);
+                }
+            }
+        }
+    
+        tbody tr{
+    
+            margin-bottom: 1rem;
+            color: var(--dark-blue);
+            cursor: pointer;
+            border-width: 2px;
+            border-style: solid;
+            height: 8.5rem;
+            border-color: #e2e8f0 !important;
+            transition: all .3s ease;
+            &:hover{
+                background: var(--blue-light);
+            }
+           
+
+            td{
+                border-right: 2px solid #e2e8f0;
+                padding: 0 1rem;
+                transition:all .3s ease;
+                &:hover{
+                    background: rgba(236, 236, 236, 0.621);
+                }
+            }
+           
+
+        }
+
+        img{
+            width: 6rem;
+            height: 3rem;
+        }
+    }
+
+   
+}
+
+.mobileTableAdmin{
+
+    display: none;
+
+    .single-m-a-t{
+        padding: 1.3rem .2rem;
+        border-radius: .5rem;
+        margin-bottom: .8rem;
+
+        .click-t-view{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            width: 100%;
+            cursor: pointer;
+            background: var(--green-lighter);
+        }
+
+        .title-lable{
+            padding-left: 1rem;
+            background: #07468a;
+    color: white;
+    padding: 1rem 1rem;
+           
+        }
+        .title-text {
+               
+            p{
+                padding: 1rem 0rem 1rem 1rem;
+                background: #135aa5;
+                color: white;
+            }
+        }
+        
+
+        p{
+            font-size: 1.4rem;
+        }
+        .title-a-m{
+         
+           
+        }
+        .filt-t{
+            margin-bottom: 1rem;
+        }
+        .he{
+            font-weight: 600;
+            font-size: 1.4rem;
+            
+        }
+        text-align: start;
+
+        .single-action{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            background: #1c63b5;
+            color: white;
+            
+
+            .tye{
+                width: 100%;
+                padding: .3rem .5rem;
+          
+                text-align: start;
+            }
+
+            img{
+                width: 4rem;
+             
+            }
+        }
+    }
+}
+
+.no-news{
+    padding: 8rem 0rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 90%;
+    border-radius: 1.5rem;
+    h3{
+        transform: translateY(1rem);
+        color: var(--admin-red);
+    }
+}
+
+
+.updatePostContainer{
+       
+    position: fixed;
+    top:50%;
+    left:50%;
+     width: 50%;
+     height: fit-content;
+     backdrop-filter: blur(5px);
+     border-radius: .5rem;
+     background: #ffffffde;
+     transform: translate(-50%,-50%);
+     z-index: 980;
+     display: flex;
+     color: var(--black);
+     flex-direction: column;
+     justify-content: center;
+     padding: 3rem 0;
+
+
+.lable{
+  margin-bottom: 1rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+
+     button{
+        padding:2rem 3rem;
+        outline: none;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+        background: var(--admin-red);
+        border: none;
+        margin-top: 1rem;
+        width: 100%;
+        transition: all .3s ease;
+        &:hover{
+            background: var(--red);
+        }
+     }
+
+     h2{
+         text-align: center;
+         width: 100%;
+         font-weight: var(--nzito);
+     }
+
+     .updatePostInside{
+         width: 80%;
+         margin: 0 auto;
+
+         .inputBody{
+             height: 12rem;
+         }
+     }
+
+     .cancel-update{
+         position: absolute;
+         top: 1rem;
+         right: 2rem;
+         cursor: pointer;
+
+         svg{
+             width: 4rem;
+             max-height: 5rem;
+             
+         }
+     }
+
+     input{
+         padding:2rem 3rem;
+        border-radius:.5rem;
+        font-size:1.6rem;
+        outline: none;
+        border: none;
+        width: 100%;
+
+
+     }
+}
+
+
+
+.fade-white-bg{
+    background: rgba(0, 0, 0, 0.61);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+}
+
+
+
+.PROMPT{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 700;
+    width: 40rem;
+    height: 30rem;
+    background: rgba(255, 255, 255, 0.79);
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    flex-direction: column;
+
+
+    h3{
+        color: var(--black);
+        font-weight: 900;
+    }
+
+     div{
+         display: flex;
+         width: 100%;
+         align-items: center;
+         justify-content: center;
+         margin-top: 3rem;
+     }
+
+     .no{
+         background: rgb(10, 148, 65) !important;
+     }
+    button{
+        padding: 1.8rem 4.5rem;
+        margin-right: 1rem;
+        outline: none;
+        border: none;
+        border-radius: .5rem;
+        cursor: pointer;
+        color: var(--white);
+        background: var(--admin-red);
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+}
+
+.REFRESH{
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    background:#067db0;
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+
+.TaskSvg{
+    background: var(--admin-bg) !important;
+    cursor: pointer;
+    font-weight: bold;
+}

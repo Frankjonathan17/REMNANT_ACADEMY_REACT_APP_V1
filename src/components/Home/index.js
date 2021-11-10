@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import WelcomeApplyNow from '../ALLCOMMON/welcome Apply Now Box';
 import './index.css'
+import ReactLoading from 'react-loading'
 import Slider from '../Slider/index';
 import {Link} from 'react-router-dom';
 import {ReactComponent as Play }from '../../assets/Play.svg';
@@ -15,7 +16,7 @@ import PdfPic from '../../images/file.png';
 import IntroVideo from '../../videos/remnant .mp4';
 import BabyClassImg from '../../images/babyclass.jpg';
 import AllStudentsImg from '../../images/all-students.jpg';
-import HighClassImg from '../../images/gorofa.jpg';
+import HighClassImg from '../../images/CropLasaba.jpg';
 import StudentPc from '../../images/student.png';
 import SkillsPic from '../../images/skills.png';
 import KeyPic from '../../images/key-person.png';
@@ -26,10 +27,37 @@ import NgaoPic from '../../images/ngao.png';
 import TcuPic from '../../images/tcu.png';
 import VetaPic from '../../images/veta.png';
 import NectaPic from '../../images/necta.png';
+import axios from 'axios';
+
 class Home extends Component {
 
 
+    state={
+        news:[],
+        loadingNews:false
+   }
+
+
+
     componentDidMount(){
+        this.setState({loadingNews:true})
+        const FetchNews = async ()=>{
+
+            try{
+             this.setState({loadingNews:true})
+             const news = await axios.post('/api/get/news')
+             let few = news.data.result.slice(0,4)
+            this.setState({news:few})
+            this.setState({loadingNews:false})
+         //    console.log(news)
+            }
+            catch(er){
+                console.error(er)
+                this.setState({loadingNews:false})
+            } 
+             
+         }
+         FetchNews()
 
             setTimeout(() => {
                 window.scrollTo(0,0)
@@ -191,7 +219,7 @@ closeVideo.onclick=function(){
            </div>
            <div className='j-box'>
                <div className='j-pic'>
-                <img src={HighClassImg} alt='middle class'/>
+                <img src={AllStudentsImg} alt='middle class'/>
                </div>
                <div className='j-info'>
                    <h2>MIDDLE SCHOOL</h2>
@@ -204,7 +232,7 @@ closeVideo.onclick=function(){
            </div>
            <div className='j-box'>
                <div className='j-pic'>
-             <img src={AllStudentsImg} alt='upper school'/>
+             <img src={HighClassImg} alt='upper school'/>
                </div>
                <div className='j-info'>
                    <h2>UPPER SCHOOL</h2>
@@ -254,23 +282,47 @@ closeVideo.onclick=function(){
         </div>
         <div className="postedBox">
             {/* single post start */}
-            <div className="post">
-                <div className="file">
-                    <img src={PdfPic} alt="fileType"/>
+            {this.state.news.length !==0?<React.Fragment>
+            {
+                this.state.news.map((n,i)=>{
+                    return  <Link  key={i} style={{display:'block'}} to={`/single-post/${n._id}`}>
+                    
+                    <div className="post" 
+                   >
+                  
+                   <div className="file">
+                        <img src={PdfPic} alt="fileType"/>
+                    </div>
+                    <div className="text">
+                  <span>
+                   {n.title}
+                  </span>
+                    </div>
+                    <div className="time">
+                    {new Date(n.date).toLocaleDateString()}
+                    </div>
+                  
+                 
                 </div>
-                <div className="text">
-              <span>
-                Call for meeting all  teachers at the conference center 
-              </span>
-                </div>
-                <div className="time">
-                 22/11/2021
-                </div>
-             
-            </div>
+                </Link>
+                })
+            }
+            </React.Fragment>:''}
+
+            {this.state.newsLoading&&this.state.news.length===0? 
+                         <ReactLoading type={'spin'} color={'var(--blue)'} height={'5rem'} width={'5rem'} />
+            :''}
             {/* single post ends */}
         {/* out side of postbox 👇 */}
+        <div>  {this.state.loadingNews?
+    <div className='newsLoader' style={{position:'ablsolute',top:'0',left:'20%',marginTop:'7rem'}}>
+    <ReactLoading type={'spin'} color={'var(--blue)'} height={'3rem'} width={'3rem'} />
+    </div> :''}    
+</div>
+{this.state.loadingNews===false && this.state.news.length===0?<div style={{marginTop:'5.2%'}} className='no-news'><h3>no news posted!</h3></div>:''}
         </div>
+      
+    
      </div>
 </div>
 <div className="rightSide">
@@ -348,8 +400,9 @@ closeVideo.onclick=function(){
                           <div className="textBox">
                               <h3>Brilliant Mentors</h3>
                               <p>
-                                  we have certified teachers with enough experience 
-                                   in teaching and caring students.
+                             we have experienced 
+                                 teachers who knows how to treat pupils kindly.
+                                
                               </p>
                           </div>
                       </div>
@@ -364,8 +417,9 @@ closeVideo.onclick=function(){
                             <h3>Best Perfomance</h3>
                             <p>
                                
-                                remnant in  national examinations is 
-                                ranking and holding top position at Kibaha District
+                                remnant academy is the best choice at pwani and Dar Region 
+                               because perfome well various kind of exams for these 
+                            <Link to='perfomance' style={{color:'var(--reded)',fontWeight:'bold'}}>view our results here</Link>
                             
                             </p>
                         </div>
@@ -380,10 +434,16 @@ closeVideo.onclick=function(){
                             <h3>We Believe in Talent</h3>
                             <p>
                                 Our teachers are here to hold your children talent and boost
-                                student dreams to come true.
+                                student dreams to come true to archieve our vision of making
+                                elite summit learders.
                             </p>
                         </div>
                     </div>
+                    <div className="single"  style={{background:'var(--red)'}}> 
+                          <div className="textBox">
+                            <Link style={{display:'block',color:'white',background:'var(--red)',height:'100%'}} to='/philosophy-value'>  <h3>Read more about us &gt;&gt;</h3>  </Link>
+                          </div>
+                      </div>
                   </div>
                   
             </div>
