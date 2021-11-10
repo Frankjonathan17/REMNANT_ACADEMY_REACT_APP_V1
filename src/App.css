@@ -3457,4 +3457,8 @@ html body .mobileMenu .insideMenu .containerMenu .menues div {
 html body iframe {
   width: 100% !important;
 }
+
+html body .Gallery .GalleryInner .GRID-GALLERY {
+  min-height: 37rem !important;
+}
 /*# sourceMappingURL=App.css.map */
