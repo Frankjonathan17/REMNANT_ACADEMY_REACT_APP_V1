@@ -918,7 +918,7 @@ deleteApplForm=(_id)=>{
             <div className='profileShortCut'>
                 <div className='profileBOx'>
                 <img onError={i=>i.target.src=`${profile}`}
-                 src={`http://localhost:5050/api/get/user/pic/${this.props.user._id}`} alt='userPic'/>
+                 src={`https://remnantbaseapi.herokuapp.com/api/get/user/pic/${this.props.user._id}`} alt='userPic'/>
                 </div>
                 <div className='profile-info'>
                     <h4>{user.firstName}  &nbsp;{user.lastName}  </h4>
@@ -1079,7 +1079,7 @@ deleteApplForm=(_id)=>{
         <div className='welcomePerson'>
             <div className='Upic'>
             <img onError={i=>i.target.src=`${profile}`}
-                 src={`http://localhost:5050/api/get/user/pic/${this.props.user._id}`} alt='userPic'/>
+                   src={`https://remnantbaseapi.herokuapp.com/api/get/user/pic/${this.props.user._id}`} alt='userPic'/>
             </div>
             <div className='wTexts'>
                 <h3>Welcome back {this.props.user.firstName}!</h3>
@@ -1306,7 +1306,7 @@ deleteApplForm=(_id)=>{
                              >Logout</div>   
                             <div className='editProfileSetting'>
                             <img onError={i=>i.target.src=`${profile}`}
-                      src={`http://localhost:5050/api/get/user/pic/${this.props.user._id}`} alt='userPic'/>
+   src={`https://remnantbaseapi.herokuapp.com/api/get/user/pic/${this.props.user._id}`} alt='userPic'/>
                             </div>
                         {this.state.updateError.length>1 &&  <div className='updateProfileErrors'>{this.state.updateError}</div>}   
                            <div className='createTitle'>
